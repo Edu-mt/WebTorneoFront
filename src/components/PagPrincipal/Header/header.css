@@ -1,0 +1,50 @@
+.buscadorPrincipal {
+    /* color: aliceblue;
+    height: 4em;
+    width: 100%; */
+    border-color: rgb(124, 123, 123);
+    border-style: ridge;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo{
+    background-image: url(./opsLogo.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 65px;
+    height: 100px;
+    margin-top: 5px;
+    margin-left: 91px;
+  }
+  .Titulo{
+    background-image: url(./call3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 377px;
+    height: 110px;
+    margin-left: 73px;
+  }
+  .ZonaUsuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-right: 40px;
+  }
+ 
+.Icono{
+  background-image: url(./icono.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+.Usuario{
+
+}
