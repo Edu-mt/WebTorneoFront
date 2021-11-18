@@ -53,6 +53,7 @@ setLogo(event.target.files[0])
   return (
     <div className="CajaCrearEquipo">
       {/* <form method="" action=""> */}
+      <div className="crearColum">
       <input
         className="NombreEquipo"
         type="text"
@@ -70,6 +71,7 @@ setLogo(event.target.files[0])
       <input type="file" className="form-control" name="image" onChange={handleInputChange} /> este es el input bueno del profesor
        */}
        <br/>
+       <p>Asignar color1</p>
        <input
         className="Color"
         type="color"
@@ -79,6 +81,7 @@ setLogo(event.target.files[0])
         onChange={(e) => setColor1(e.target.value)}
        />
         <br/>
+        <p>Asignar color2</p>
       <input
         className="Color"
         type="color"
@@ -86,11 +89,14 @@ setLogo(event.target.files[0])
         placeholder="Color de Equipo 2"
         name="color2"
         onChange={(e) => setColor2(e.target.value)}
+        
       /> 
-       <br/>
+       <br/><br/>
        {/* <button type="submit" className="btn btn-dark" onClick={()=>submit()}>Save</button> este es el submit bueno del profesor */}
-      <button onClick={enviarDatosEquipos} className="CrearEquipo">Crear Equipo</button>
-    </div>
+      <button onClick={enviarDatosEquipos} className="btnCrearEquipo">Crear Equipo</button>
+      </div>
+      <div className="imputLogo"></div>
+      </div>
   );
 }
 

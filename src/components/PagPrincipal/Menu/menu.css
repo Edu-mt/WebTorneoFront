@@ -2,7 +2,7 @@
   color: aliceblue;
   display: flex;
   border-color: rgb(124, 123, 123);
-  border-style: solid;
+  border-style: ridge;
   width: 15em;
   height: 804px;
   flex-direction: column;

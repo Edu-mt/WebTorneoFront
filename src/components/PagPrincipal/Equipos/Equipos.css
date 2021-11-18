@@ -35,22 +35,24 @@
   }
 
   .CajaCrearEquipo{
+    background-color: #292929c7;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     align-content: center;
     margin-top: 70px;
     border-style: inset;
     border-color: #ff7b00;
     border-width: 7px;
     height: 350px;
-    width: 18em;
+    width: 45em;
     padding: 20px;
+
   }
   .NombreEquipo{
-    width: 22em;
+    width: 32em;
     height: 3em;
     border-color: rgb(255, 123, 0);
     cursor: pointer;
@@ -61,11 +63,24 @@
     border-color: rgb(255, 123, 0);
     cursor: pointer;
   }
-  .CrearEquipo{
+  .btnCrearEquipo{
   color: white;
     width: 18em;
     height: 55px;
     background-color: rgba(87, 87, 87, 0.918);
     border-color: rgb(255, 123, 0);
     cursor: pointer;
+  }
+  .btnCrearEquipo:hover{
+    background-color: rgb(75, 73, 72);
+    border-color: rgb(255, 123, 0);
+  }
+  .imputLogo{
+    background-image: url(./pngLogo.png);
+    width: 227px;
+    height: 224px;
+    margin-right: 50px;
+    margin-top: 85px;
+    background-repeat: no-repeat;
+    background-size: cover;
   }

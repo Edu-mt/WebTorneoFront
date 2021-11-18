@@ -2,8 +2,11 @@
       background-image: url(./call2.jpg);
       background-repeat: no-repeat;
       background-size: cover;
+      border-color: rgb(124, 123, 123);
+      border-style: ridge;
       background-position-x: -40em;
       height: 804px;
+      width: 15em;
   }
 
   
