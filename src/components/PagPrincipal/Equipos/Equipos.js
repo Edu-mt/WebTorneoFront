@@ -4,7 +4,7 @@ import "./Equipos.css";
 
 export default function Equipos() {
     return (
-        <div>
+        
           <div className="Equipos">
             {/* <p>Crea o unete a un equipo</p> */}
             <div className="creaUne">
@@ -12,7 +12,7 @@ export default function Equipos() {
           <div><Link to="/BuscadorEquipos"><button className="btnEquipos">Unirse equipo</button></Link></div>
         </div>
         </div>
-        </div>
+        
        
     )
 }

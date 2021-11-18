@@ -68,7 +68,7 @@ useEffect( async() => {
                    <div className="fondo"><Loggin /></div>
                  </Route>
                  <Route  path="/Equipos">
-                   <div ><Equipos/></div>
+                   <div className="Equipos"><Equipos/></div>
                  </Route>
                  <Route  path="/CrearEquipo">
                    <div ><CrearEquipo/></div>

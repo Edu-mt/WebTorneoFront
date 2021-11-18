@@ -53,7 +53,7 @@ function BuscadorEquipos() {
   console.log(resultBusqueda);
   return (
     <>      
-    <div className="App">
+    <div className="CajaUnirseEquipo">
             <input
               class="form-control"
               type="text"
@@ -70,7 +70,7 @@ function BuscadorEquipos() {
                 Nombre: {data.nombreEquipo}{" "}
                 <button
                   onClick={() => enviarJugador(data)}
-                  className=""
+                  className="UnirseEquipo"
                   key={index}
                 >
                   Unirse a equipo

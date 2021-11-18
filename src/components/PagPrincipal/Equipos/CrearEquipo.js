@@ -51,16 +51,17 @@ setLogo(event.target.files[0])
  } 
 
   return (
-    <div className="App">
+    <div className="CajaCrearEquipo">
       {/* <form method="" action=""> */}
       <input
+        className="NombreEquipo"
         type="text"
         value={nombreEquipo}
         placeholder="Nombre de Equipo"
         name="nombreEquipo"
         onChange={(e) => setNombreEquipo(e.target.value)}
       />
-      <br/>
+      
       {/* <form action="/uploadfile" enctype="multipart/form-data" method="POST"> 
         <input type="file" name="myFiles" />
         <input type="submit" value="Upload a file"/>
@@ -70,6 +71,7 @@ setLogo(event.target.files[0])
        */}
        <br/>
        <input
+        className="Color"
         type="color"
         // value="#ff0000"
         placeholder="Color de equipo 1"
@@ -78,6 +80,7 @@ setLogo(event.target.files[0])
        />
         <br/>
       <input
+        className="Color"
         type="color"
         // value="#ff0000"
         placeholder="Color de Equipo 2"
@@ -86,7 +89,7 @@ setLogo(event.target.files[0])
       /> 
        <br/>
        {/* <button type="submit" className="btn btn-dark" onClick={()=>submit()}>Save</button> este es el submit bueno del profesor */}
-      <button onClick={enviarDatosEquipos}>Crear Equipo</button>
+      <button onClick={enviarDatosEquipos} className="CrearEquipo">Crear Equipo</button>
     </div>
   );
 }

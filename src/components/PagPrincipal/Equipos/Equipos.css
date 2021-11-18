@@ -6,13 +6,14 @@
     border-style: inset;
     border-color: #ff7b00;
     border-width: 7px;
-    height: 6em;
-    width: 15em;
+    height: 350px;
+    width: 18em;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: flex-end;
+    margin-top: 85px;
   }
   .creaUne{
     display: flex;
@@ -25,10 +26,46 @@
     background-color: rgba(87, 87, 87, 0.918);
     border-color: rgb(255, 123, 0);
     cursor: pointer;
-    margin-right: 75px;
-    margin-left: 75px;
+    margin-right: 135px;
+    margin-left: 135px;
   }
   .btnEquipos:hover{
     background-color: rgb(75, 73, 72);
     border-color: rgb(255, 123, 0);
+  }
+
+  .CajaCrearEquipo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+    margin-top: 70px;
+    border-style: inset;
+    border-color: #ff7b00;
+    border-width: 7px;
+    height: 350px;
+    width: 18em;
+    padding: 20px;
+  }
+  .NombreEquipo{
+    width: 22em;
+    height: 3em;
+    border-color: rgb(255, 123, 0);
+    cursor: pointer;
+  }
+  .Color{
+    height: 3em;
+    width: 6em;
+    border-color: rgb(255, 123, 0);
+    cursor: pointer;
+  }
+  .CrearEquipo{
+  color: white;
+    width: 18em;
+    height: 55px;
+    background-color: rgba(87, 87, 87, 0.918);
+    border-color: rgb(255, 123, 0);
+    cursor: pointer;
   }

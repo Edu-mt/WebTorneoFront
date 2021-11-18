@@ -1,12 +1,12 @@
 .MenuPrincipal {
-    color: aliceblue;
-    display: flex;
-    border-color: rgb(124, 123, 123);
-    border-style: solid;
-    width: 15em;
-    height: 760px;
-    flex-direction: column;
-    align-items: center;
+  color: aliceblue;
+  display: flex;
+  border-color: rgb(124, 123, 123);
+  border-style: solid;
+  width: 15em;
+  height: 804px;
+  flex-direction: column;
+  align-items: center;
   }
 
   .btnMenu{
@@ -27,6 +27,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 15em;
-    height: 483px;
-    background-position-x: -21px;
+    height: 527px;
+    background-position-x: -36px;
   }
