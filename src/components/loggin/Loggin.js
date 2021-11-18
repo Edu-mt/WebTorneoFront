@@ -54,6 +54,7 @@ let reset = () => {
 }
 
   return ( 
+    <div className="fondo">
     <div className="cajaLogin"> 
           <div><h2>Noticias Gamer</h2></div>
       <div className="inputLogin">
@@ -66,6 +67,7 @@ let reset = () => {
       <Link to="/AltaUsuario" >registrate aqui</Link>
       </div>
     </div> 
+    </div>
   ); 
 } 
 

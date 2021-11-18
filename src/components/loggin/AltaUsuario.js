@@ -46,6 +46,7 @@ function AltaUsuario(props) {
 
 
   return (
+    <div className="fondo">
     <div className="cajaLogin">
       <div><h2>REGISTRATE</h2></div>
       <div className="inputLogin">
@@ -54,14 +55,11 @@ function AltaUsuario(props) {
       <input type="text" value={email} placeholder="Email" name="email" onChange={(e) => setEmail(e.target.value)}/>
       </div>
       <button onClick={enviarDatos} className="btnLogin">Registrar</button>
-      <div className="linkRegistrar"> 
-        
+      <div className="linkRegistrar">        
         <div><Link to="/">Inicie Sesión aqui</Link></div>
-      </div>
-      
-      
-      
-    </div>
+      </div>   
+   </div>
+   </div>
   );
 }
 

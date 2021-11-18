@@ -1,5 +1,5 @@
 .fondo{
-    background: url(./fondo.jpg);
+    background-image: url(./fondo.jpg);
     position:absolute;
     height: 100vh;
     width: 100%;
