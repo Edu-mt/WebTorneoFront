@@ -3,7 +3,7 @@ import {  useDispatch } from "react-redux";
 import { loggin, addDataUser } from "../../features/userSlice";
 import {getUser} from "../../services/user";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "../../App.css"
+// import "../../App.css"
 import "./logginYRegistro.css";
 
 // import axios from "axios";

@@ -3,7 +3,8 @@ import {  useDispatch } from "react-redux";
 import {addUser} from "../../services/user";
 import { addDataUser } from "../../features/userSlice";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "../../App.css"
+// import "../../App.css"
+import "./logginYRegistro.css";
 
 
 
