@@ -10,7 +10,7 @@ font-family: 'Archivo Black', sans-serif;
   background: url(./img/mapamundo.jpg);
   position:relative;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 106vh;
   width: 100%;
 }
 
@@ -21,12 +21,7 @@ font-family: 'Archivo Black', sans-serif;
 }
 
 
-.Noticias{
-  text-align: center;
-    color: #dbdbdb;
-    background-color: #808080b0;
-    font-size: xxx-large;
-}
+
 .Equipos{
   text-align: center;
   color: #dbdbdb;
