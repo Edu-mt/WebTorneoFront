@@ -46,7 +46,7 @@ function AltaUsuario(props) {
 
   return (
     <div className="cajaLogin">
-      <div><h2>REGISTRATE lalaal</h2></div>
+      <div><h2>REGISTRATE</h2></div>
       <div className="inputLogin">
       <input type="text" value={nombre} placeholder="Nombre" name="nombre" onChange={(e) => setNombre(e.target.value)}/>
       <input type="password" value={password} placeholder="Introducir contraseña"name="password" onChange={(e) => setPassword(e.target.value)}/>
