@@ -3,6 +3,7 @@ import { traerTorneo } from "../../../services/user";
 import {  useSelector  } from "react-redux";
 import { selectDataUser } from "../../../features/userSlice";
 import { addGanador , changeGanador } from "../../../services/user";
+import "./Calendario.css";
 
 function VerTorneos() {
     const [mostrarTorneo, setMostrarTorneo] = useState([]);
@@ -67,7 +68,7 @@ function VerTorneos() {
                     {equipos.equipo1}
                     {" "}{" "+"<-----VS----->"+" "}{" "}
                     {equipos.equipo2}{" "}
-                    {datosUsuario.admin? (<select value={resultados[index]} onChange={(event)=>cambiarResultado(event,index)}>
+                    {datosUsuario.admin? (<select className="selectGnanador" value={resultados[index]} onChange={(event)=>cambiarResultado(event,index)}>
                     {/* <option selected >{ganador?gandor:"seleccionar ganador"}</option> 
                     Esto es lo que dijo el profesor para que se quedase el valor si ya 
                     habian metido un resultado en la base de datos cuando cambiemos el estado de ganador*/}
@@ -86,8 +87,8 @@ function VerTorneos() {
           </div>
         </div>
       ))}
-       {botones === true && (<button onClick={enviarGanador}>Enviar Ganador</button>)}
-       {botones === true && (<button onClick={modificarGanador}>Modificar Ganador</button>)}
+       {botones === true && (<button className="btnGnanador" onClick={enviarGanador}>Enviar Ganador</button>)}
+       {botones === true && (<button className="btnGnanador" onClick={modificarGanador}>Modificar Ganador</button>)}
         </div>
     )
 }

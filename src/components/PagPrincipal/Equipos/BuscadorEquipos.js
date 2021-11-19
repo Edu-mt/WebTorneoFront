@@ -55,6 +55,7 @@ function BuscadorEquipos() {
     <>      
     <div className="CajaUnirseEquipo">
             <input
+            className="inputBuscEquip"
               class="form-control"
               type="text"
               placeholder="Search"

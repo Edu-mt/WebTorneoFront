@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { traerEquipos, addTorneo } from "../../../services/user";
-
+import "./Calendario.css";
 
 function CrearTorneo() {
     const [arrayEquipos, setArrayEquipos] = useState([]);
@@ -54,7 +54,12 @@ function CrearTorneo() {
     return (
         <div> 
           <br/><br/> <br/> <br/><br/>   
-        <input type="text" placeholder="Nombre del torneo" onChange={(e) => setNombreTorneo(e.target.value)}></input>
+        <input 
+        className="nomTorneo"
+        type="text" 
+        placeholder="Nombre del torneo" 
+        onChange={(e) => 
+        setNombreTorneo(e.target.value)}></input>
         {arrayPartidas.map((data, index) => {
             return (
             <>
@@ -79,7 +84,7 @@ function CrearTorneo() {
             );
         })
         }
-        <button onClick={parejasEquipos}>Generar Torneo</button>
+        <button className="btnGenerarTorneo" onClick={parejasEquipos}>Generar Torneo</button>
          {estadoBoton === true && (<button onClick={enviarDatosTorneo}>Guardar datos torneo</button>)}
         
         

@@ -1,7 +1,7 @@
 import { selectDataUser } from "../../../features/userSlice";
 import CrearTorneo from "./CrearTorneo";
 import {  useSelector  } from "react-redux";
-
+import "./Calendario.css";
 
 import VerTorneos from "./VerTorneos";
 

@@ -4,3 +4,25 @@
     background-color: #808080b0;
     font-size: xxx-large;
   }
+  .btnGenerarTorneo{
+    color: white;
+    background-color: rgb(116 114 113 / 34%);
+      border-color: rgb(255, 123, 0);
+      cursor: pointer;
+  }
+  .selectGnanador{
+  color: #212121;
+    border-color: rgb(255, 123, 0);
+    background-color: rgba(87, 87, 87, 0.918);
+}
+.btnGnanador{
+  color: white;
+  background-color: rgb(116 114 113 / 34%);
+    border-color: rgb(255, 123, 0);
+    cursor: pointer;
+}
+.btnGenerarTorneo:hover{
+  background-color: rgb(75, 73, 72);
+  border-color: rgb(255, 123, 0);
+  color: rgb(26, 25, 25);
+}
