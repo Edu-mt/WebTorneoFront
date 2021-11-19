@@ -20,33 +20,6 @@ font-family: 'Archivo Black', sans-serif;
   
 }
 
-
-
-.Equipos{
-  text-align: center;
-  color: #dbdbdb;
-  background-color: #808080b0;
-  font-size: xxx-large;
-}
-.Clasificacion{
-  text-align: center;
-  color: #dbdbdb;
-  background-color: #808080b0;
-  font-size: xxx-large;
-}
-.Calendario{
-  text-align: center;
-  color: #dbdbdb;
-  background-color: #808080b0;
-  font-size: xxx-large;
-}
-.Perfil{
-  text-align: center;
-  color: #dbdbdb;
-  background-color: #808080b0;
-  font-size: xxx-large;
-}
-
 .Centro{
   width: 100%;
   border-color: red;

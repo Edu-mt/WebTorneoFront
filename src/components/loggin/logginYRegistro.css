@@ -1,20 +1,28 @@
 .fondo{
-    background-image: url(./fondo.jpg);
+    background-image: url(./callLoggin.jpg);
     position:absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 
   .cajaLogin {
     color:aliceblue;
-    width: 24em;
-    height: 15em;
+    width: 30em;
+    height: 20em;
     border-color: rgb(124, 123, 123);
     border-style: ridge;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left: 47em;   
+    margin-right: 10em;
+    margin-bottom: 10em;
+    background-color: #3c49644f;
   }
 
   .inputLogin{
@@ -22,20 +30,32 @@
   
   }
 
+  .nomPass{
+    color:#62a1d8;
+    width: 25em;
+    height: 40px;
+  }
+
   .btnLogin{
-    background-color: rgb(60, 168, 66);
+    background-color: rgb(29 177 92 /71%);
     border: none;
     color: white;
-    padding: 9px; 
+    padding: 9px;
     text-decoration: none;
     margin: 10px;
     cursor: pointer;
     text-align: center;
     border-radius: 8px;
-    width: 180px; 
-    text-align:center;
+    width: 180px;
+    height: 60px;
+    text-align: center;
+  }
+  .btnLogin:hover{
+    background-color: rgb(29 177 92);
+    width: 182px;
+    
   }
   .linkRegistrar{
-    color:aliceblue;
+    color:#62a1d8;
     text-align: center;
   }

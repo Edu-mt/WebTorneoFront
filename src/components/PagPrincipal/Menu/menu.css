@@ -21,6 +21,7 @@
   .btnMenu:hover{
     background-color: rgb(75, 73, 72);
     border-color: rgb(255, 123, 0);
+    color: rgb(26, 25, 25);
   }
   .imgIzq{
     background-image: url(./Call6.jpg);

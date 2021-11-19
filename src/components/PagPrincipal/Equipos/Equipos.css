@@ -6,8 +6,8 @@
     border-style: inset;
     border-color: #ff7b00;
     border-width: 7px;
-    height: 350px;
-    width: 18em;
+    height: 343px;
+    width: 53em;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -74,6 +74,7 @@
   .btnCrearEquipo:hover{
     background-color: rgb(75, 73, 72);
     border-color: rgb(255, 123, 0);
+
   }
   .imputLogo{
     background-image: url(./pngLogo.png);
@@ -83,4 +84,25 @@
     margin-top: 85px;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .CajaUnirseEquipo{
+    background-color: #292929c7;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-top: 70px;
+    border-style: inset;
+    border-color: #ff7b00;
+    border-width: 7px;
+    height: 350px;
+    width: 45em;
+    padding: 20px;
+  }
+
+  .btnUnirseEquipo{
+
   }
