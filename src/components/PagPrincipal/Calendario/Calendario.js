@@ -14,7 +14,7 @@ console.log("admin", datosUsuario.admin)
          <>  
          
          {datosUsuario.admin? (           
-            <div>                        
+            <div className="cajaCalendario">                        
                 <VerTorneos/>
                 <CrearTorneo/>
             </div>           

@@ -53,7 +53,7 @@ function CrearTorneo() {
 
     return (
         <div> 
-          <br/><br/> <br/> <br/><br/>   
+          <br/>   
         <input 
         className="nomTorneo"
         type="text" 

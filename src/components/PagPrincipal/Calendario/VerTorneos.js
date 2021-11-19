@@ -65,9 +65,12 @@ function VerTorneos() {
               return (
                 <>
                   <div>
-                    {equipos.equipo1}
-                    {" "}{" "+"<-----VS----->"+" "}{" "}
-                    {equipos.equipo2}{" "}
+                     <div className="tablaEquipos">
+                      <div className="equip">{equipos.equipo1}</div>
+                      <div className="vs">{" "}{" "+"VS"+" "}{" "}</div>
+                      <div className="equip">{equipos.equipo2}{" "}</div><br/>
+                     </div>
+                     
                     {datosUsuario.admin? (<select className="selectGnanador" value={resultados[index]} onChange={(event)=>cambiarResultado(event,index)}>
                     {/* <option selected >{ganador?gandor:"seleccionar ganador"}</option> 
                     Esto es lo que dijo el profesor para que se quedase el valor si ya 
@@ -81,6 +84,7 @@ function VerTorneos() {
                     }
                     
                   </div>
+                  <br/>
                 </>
               );
             })}
