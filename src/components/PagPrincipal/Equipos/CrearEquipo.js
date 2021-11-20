@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {  useDispatch } from "react-redux";
-// import Equipos from "../Equipos";
-import {addEquipos,subirImagen} from "../../../services/user";
+import {addEquipos, subirImagen} from "../../../services/user";
+import PropTypes from 'prop-types';
 import "./Equipos.css";
 
 function CrearEquipo() {
@@ -11,37 +11,41 @@ function CrearEquipo() {
   const [color1, setColor1] = useState("");
   const [color2, setColor2] = useState("");
   const [listaJugadores, setListaJugadores] = useState("");
+  const [fr, setFr] = useState(new FileReader());
+  const [myFileField, setMyFileField] = useState(React.createRef())
 
 
- const handleInputChange=(event)=>{
-setLogo(event.target.files[0])
+
+  
+  function traerImagen() {
+    const image = fr.result;
+    actualizarFoto(image);
   }
-  // Este es el bueno del profesor
 
-  const submit=()=>{
-    const data=new FormData();
-    // data.append("image",logo);
-    // subirImagen(data);
-    console.log("data del submit",data);
-    console.log("este es el logo" , logo)
+ function actualizarFoto(logo) {
+  setLogo({ logo: logo });
   }
-  // Este es el bueno del profesor
 
+  function actualizarImagen(ev) {
+    if (ev.currentTarget.files.length > 0) {
+      const myFile = ev.currentTarget.files[0];
+      fr.addEventListener('load', traerImagen);
+      fr.readAsDataURL(myFile);
+    }
+  }
+  console.log("FOTO DE CREAREQUIPO", logo);
 
   const enviarDatosEquipos = async() => {
     const data = {
       nombreEquipo: nombreEquipo,
-      // logo:logo,
+      logo: logo.logo,
       color1:color1,
       color2:color2,
       listaJugadores:[],
     };
     console.log("enviarDatosEquipos", data); 
   const res =await addEquipos(data);
-//   console.log("este es el console log del res en altaUsuario",res);
-//   if(res.stateFind === false){
-//     dispatch(addDataUser(res.data));
-//   }  
+ 
 
   reset();
   };
@@ -52,7 +56,7 @@ setLogo(event.target.files[0])
 
   return (
     <div className="CajaCrearEquipo">
-      {/* <form method="" action=""> */}
+      
       <div className="crearColum">
       <input
         className="NombreEquipo"
@@ -63,13 +67,17 @@ setLogo(event.target.files[0])
         onChange={(e) => setNombreEquipo(e.target.value)}
       />
       
-      {/* <form action="/uploadfile" enctype="multipart/form-data" method="POST"> 
-        <input type="file" name="myFiles" />
-        <input type="submit" value="Upload a file"/>
-      </form>          
-
-      <input type="file" className="form-control" name="image" onChange={handleInputChange} /> este es el input bueno del profesor
-       */}
+     
+      <label className="" type="button">
+         Añadir foto de equipo
+          <input
+            type="file"
+            ref={myFileField}
+            className="cargarFoto"
+            onChange={actualizarImagen}
+          />
+        </label>
+        <div className="fotoPerfil" style={{ backgroundImage: `url(${logo.logo})`}}></div>
        <br/>
        <p>Asignar color1</p>
        <input
