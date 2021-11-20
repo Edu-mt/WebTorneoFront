@@ -12,6 +12,7 @@ const addUser =async (data) => {
       email: data.email,
       idEquipo: data.idEquipo,
       nombreEquipo: data.nombreEquipo,
+      avatar: data.avatar
     },
   })
     .then(function (response, err) {
@@ -225,9 +226,31 @@ await axios.get("http://127.0.0.1:8081/traerTorneo")
     
    };
 
+   const addFoto =async (data) => {
+ 
+    await axios({
+       method: "post",
+       url: "http://127.0.0.1:8081/enviarAvatar",    
+       data: {
+         avatar: data.foto,
+         nombreUsuario: data.usuario,
+         foto: ""
+         
+       }
+       
+     })
+     
+    
+       .catch(function (err) {
+         console.log(err);
+       });console.log("AXIOS FOTAVATAR",data.avatar);
+   
+      
+   };
 
 
 
 
 
-export { addUser, getUser, addEquipos,traerEquipos,addJugador , subirImagen, addTorneo, traerTorneo, addGanador , changeGanador };
+
+export { addUser, getUser, addEquipos,traerEquipos,addJugador , subirImagen, addTorneo, traerTorneo, addGanador , changeGanador, addFoto };
