@@ -24,17 +24,16 @@ function AltaUsuario(props) {
       password: password, 
       email: email, 
       idEquipo:"",
-      nombreEquipo:"",   
+      nombreEquipo:"",  
+      avatar: "", 
     };
     console.log("esto es el data de enviarDatos", data); 
   const res =await addUser(data);
   console.log("este es el console log del res en altaUsuario",res);
   if(res.stateFind === false){
-    dispatch(addDataUser(res.data));
-    
+    dispatch(addDataUser(res.data)); 
   }
   
-
   reset();
   };
 
@@ -50,9 +49,9 @@ function AltaUsuario(props) {
     <div className="cajaLogin">
       <div><h2>REGISTRATE</h2></div>
       <div className="inputLogin">
-      <input className="nomPass" type="text" value={nombre} placeholder="Nombre" name="nombre" onChange={(e) => setNombre(e.target.value)}/>
-      <input className="nomPass" type="password" value={password} placeholder="Introducir contraseña"name="password" onChange={(e) => setPassword(e.target.value)}/>
-      <input className="nomPass" type="text" value={email} placeholder="Email" name="email" onChange={(e) => setEmail(e.target.value)}/>
+      <input type="text" value={nombre} placeholder="Nombre" name="nombre" onChange={(e) => setNombre(e.target.value)}/>
+      <input type="password" value={password} placeholder="Introducir contraseña"name="password" onChange={(e) => setPassword(e.target.value)}/>
+      <input type="text" value={email} placeholder="Email" name="email" onChange={(e) => setEmail(e.target.value)}/>
       </div>
       <button onClick={enviarDatos} className="btnLogin">Registrar</button>
       <div className="linkRegistrar">        
