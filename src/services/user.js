@@ -171,8 +171,7 @@ const addTorneo=async (data) => {
        arrayPartidas: data.arrayPartidas
      },
      
-   });console.log("console addTorneo",data)
-  
+   });console.log("console addTorneo",data)  
  };
 
 
@@ -234,23 +233,24 @@ await axios.get("http://127.0.0.1:8081/traerTorneo")
        data: {
          avatar: data.foto,
          nombreUsuario: data.usuario,
-         foto: ""
-         
-       }
-       
-     })
-     
-    
+         foto: ""         
+       }       
+     })    
        .catch(function (err) {
          console.log(err);
-       });console.log("AXIOS FOTAVATAR",data.avatar);
-   
-      
+       });console.log("AXIOS FOTAVATAR",data.avatar);      
+   };
+
+   const deleteTorneo=async (data) => {
+    await axios({
+       method: "post",
+       url: "http://127.0.0.1:8081/EliminarTorneo",
+       data: {
+         nombreTorneo: data.nombreTorneo,
+       },       
+     });console.log("console deleteTorneo en el post",data)  
    };
 
 
-
-
-
-
-export { addUser, getUser, addEquipos,traerEquipos,addJugador , subirImagen, addTorneo, traerTorneo, addGanador , changeGanador, addFoto };
+export { addUser, getUser, addEquipos,traerEquipos,addJugador , subirImagen, addTorneo, traerTorneo, 
+  addGanador , changeGanador, addFoto , deleteTorneo };

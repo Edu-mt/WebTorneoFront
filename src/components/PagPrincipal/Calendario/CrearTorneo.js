@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { traerEquipos, addTorneo } from "../../../services/user";
+import { traerEquipos, addTorneo , traerTorneo , deleteTorneo } from "../../../services/user";
 import "./Calendario.css";
 
 function CrearTorneo() {
@@ -7,8 +7,10 @@ function CrearTorneo() {
     const [arrayPartidas, setArrayPartidas] = useState([]);
     const [nombreTorneo, setNombreTorneo] = useState(""); 
     const [estadoBoton, setEstadoBoton] = useState(false);
-  
-    
+    const [vista, setVista] = useState(true);
+    const [torneoTraido, setTorneoTraido] = useState([]);
+
+    console.log("esto es torneotraido", torneoTraido);    
 
     useEffect( async() => { 
       
@@ -23,8 +25,14 @@ function CrearTorneo() {
         }   
         setArrayEquipos (equipos);
         console.log("traer equipos server", arrayEquipos);
-      }, []); 
-     
+
+        const torneo = await traerTorneo();
+        if(torneo!=0){
+          setVista(false);
+          setTorneoTraido(torneo);
+        }
+        
+      }, []);      
     
       function parejasEquipos() {
         const equiposFinal = new Array(); 
@@ -36,10 +44,7 @@ function CrearTorneo() {
           equiposFinal.push(objeto);      
         }
         setArrayPartidas(equiposFinal);
-
-      }    
-
-    
+      }        
 
       const enviarDatosTorneo = async(event) => {
         const data = {
@@ -47,47 +52,54 @@ function CrearTorneo() {
           arrayPartidas:arrayPartidas,
         };
         const res = await addTorneo(data);
-        console.log("----ENVIAR DATOS TORNEO---", data); 
-     
+      };
+
+      const eliminarTorneo = async(event) => {
+        const data = {
+          nombreTorneo: torneoTraido[0].nombreTorneo,          
+        };
+        const res = await deleteTorneo(data);
+        console.log("----ELIMINAR DATOS TORNEO---", data);      
       };
 
     return (
         <div> 
-          <br/>   
-        <input 
-        className="nomTorneo"
-        type="text" 
-        placeholder="Nombre del torneo" 
-        onChange={(e) => 
-        setNombreTorneo(e.target.value)}></input>
-        {arrayPartidas.map((data, index) => {
-            return (
-            <>
-                <div className="">
-                <div>
-                    
-                    <tr>
-                        <th>
-                           
-                            {data.equipo1}{"----"}
-                        </th>
-                        <th>
-                            VS{"----"}
-                        </th>
-                        <th>{data.equipo2}{" "}
-                           
-                        </th>                            
-                        </tr>
-                </div>
-                </div>
-            </>
-            );
-        })
-        }
-        <button className="btnGenerarTorneo" onClick={parejasEquipos}>Generar Torneo</button>
-         {estadoBoton === true && (<button onClick={enviarDatosTorneo}>Guardar datos torneo</button>)}
-        
-        
+          <br/>
+          {vista? (           
+            <div>                        
+                <input 
+                className="nomTorneo"
+                type="text" 
+                placeholder="Nombre del torneo" 
+                onChange={(e) => 
+                setNombreTorneo(e.target.value)}></input>
+          {arrayPartidas.map((data, index) => {
+              return (
+              <>
+                  <div className="">
+                  <div>                      
+                      <tr>
+                          <th>                            
+                              {data.equipo1}{"----"}
+                          </th>
+                          <th>
+                              VS{"----"}
+                          </th>
+                          <th>{data.equipo2}{" "}                            
+                          </th>                            
+                          </tr>
+                  </div>
+                  </div>
+              </>
+              );
+          })
+          }
+          <button className="btnGenerarTorneo" onClick={parejasEquipos}>Generar Torneo</button>
+          {estadoBoton === true && (<button onClick={enviarDatosTorneo}>Guardar datos torneo</button>)}                
+          </div>           
+         )
+         : 
+         <button className="btnGenerarTorneo" onClick={eliminarTorneo} >Eliminar Torneo</button>}        
         </div>
     )
 }
