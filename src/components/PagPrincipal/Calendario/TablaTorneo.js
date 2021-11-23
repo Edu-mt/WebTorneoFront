@@ -67,10 +67,10 @@ function TablaTorneo() {
 
 
   useEffect( async() => { 
-      
+    if(torneoTraido!=0){
     const torneoTraido = await traerTorneo();
 
-    setJornadas(torneoTraido[0].jornadas)
+    setJornadas(torneoTraido[0].jornadas)}
 
     
   }, []);       
