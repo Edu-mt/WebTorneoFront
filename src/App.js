@@ -76,9 +76,6 @@ useEffect( async() => {
                  <Route  path="/BuscadorEquipos">
                    <div ><BuscadorEquipos/></div>
                  </Route>
-                 <Route  path="/Clasificacion">
-                   <div ><Clasificacion/></div>
-                 </Route>
                  <Route  path="/Perfil">
                    <div ><Perfil/></div>
                  </Route>
