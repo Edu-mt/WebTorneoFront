@@ -49,9 +49,21 @@ function FinalizarJornada() {
 
                     console.log("--- ARRAY GANADORES despues----", equiposFinal); 
                 }
+                if (ganadoresTorneo.length === 1 ){
+                    const equiposFinal = [];                     
+                    var objeto = {equipo1:ganadoresTorneo[0].resultados}
+                    equiposFinal.push(objeto);                        
+                    const res = await addJornada(equiposFinal); 
+                    console.log("--- ARRAY GANADORES despues----", equiposFinal); 
+                }
+                
             }else{
                 alert("Hay que elegir todos los ganadores");
             }
+            
+
+           
+           
             
         }   
 
