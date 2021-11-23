@@ -7,7 +7,7 @@ function CrearTorneo() {
     const [arrayEquipos, setArrayEquipos] = useState([]);
     const [arrayPartidas, setArrayPartidas] = useState([]);
     const [nombreTorneo, setNombreTorneo] = useState(""); 
-    const [estadoBoton, setEstadoBoton] = useState(false);
+    const [estadoBoton, setEstadoBoton] = useState(true);
     const [vista, setVista] = useState(true);
     const [torneoTraido, setTorneoTraido] = useState([]);
 
@@ -28,10 +28,10 @@ function CrearTorneo() {
         console.log("traer equipos server", arrayEquipos);
 
         const torneo = await traerTorneo();
-        // if(torneo!=0){
-        //   setVista(false);
-        //   setTorneoTraido(torneo);
-        // }
+        if(torneo!=0){
+          setVista(false);
+          setTorneoTraido(torneo);
+        }
         
       }, []);      
     
@@ -67,9 +67,8 @@ function CrearTorneo() {
     return (
         <div> 
           <br/>
-         
-            <div>  
-                               
+          {vista ? (
+          <div>                               
             <input 
             className="nomTorneo"
             type="text" 
@@ -100,19 +99,14 @@ function CrearTorneo() {
             }
             <button className="btnGenerarTorneo" onClick={parejasEquipos}>Generar Torneo</button>          
             {estadoBoton === true && (<button onClick={enviarDatosTorneo}>Guardar datos torneo</button>)}                
-            </div>  
-         
-
-           
+          </div>  
+          )
+          : 
           <div>
           <button className="btnGenerarTorneo" onClick={eliminarTorneo} >Eliminar Torneo</button>
           <FinalizarJornada/>
-         </div>
-          
-                     
-        
-        
-                 
+         </div>          
+          }                        
         </div>
     )
 }
