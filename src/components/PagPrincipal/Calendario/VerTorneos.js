@@ -10,18 +10,29 @@ function VerTorneos() {
     const [resultados, setResultados] = useState([]);
     const [botones, setBotones] = useState(false);
     const datosUsuario = useSelector(selectDataUser);
-    const [indice, setIndice] = useState("");
-    
-    
+    const [indice, setIndice] = useState(""); 
+    const [jornadaReciente, setJornadaReciente] = useState([]);   
 
     useEffect( async() => { 
       
         const torneoTraido = await traerTorneo();
+        if(torneoTraido!=0){
         setMostrarTorneo(torneoTraido);
-       
-      }, []); 
+        console.log("TORNEOTRAIDO", torneoTraido);
+
+        const jornadasTorneo = torneoTraido[0].jornadas;
+        console.log("esto es jornadasTorneo", jornadasTorneo);
+        let j = jornadasTorneo.length-1;
+        console.log("esto es longitudJornada", j);
+        const ultimaJornada = torneoTraido[0].jornadas[j];
+        console.log("esto es ultimaJornada", ultimaJornada);
+        setJornadaReciente(ultimaJornada);
+
+        }
+      }, []);       
       
       console.log("PUES AQUI ESTA", mostrarTorneo);
+      console.log("esta es la jornadaReciente", jornadaReciente);
 
       const cambiarResultado = (event,index) => {
         const prueba = resultados;
@@ -57,11 +68,11 @@ function VerTorneos() {
     
     return (
         <div>
-            {mostrarTorneo.map((data) => (
+            
         <div>
-          <div>{data.nombreTorneo}</div>
+          {/* <div>{mostrarTorneo.nombreTorneo}</div> */}
           <div>
-            {data.arrayPartidas.map((equipos, index) => {
+            {jornadaReciente.map((equipos, index) => {
               return (
                 <>
                   <div>
@@ -90,7 +101,7 @@ function VerTorneos() {
             })}
           </div>
         </div>
-      ))}
+      
        {botones === true && (<button className="btnGnanador" onClick={enviarGanador}>Enviar Ganador</button>)}
        {botones === true && (<button className="btnGnanador" onClick={modificarGanador}>Modificar Ganador</button>)}
         </div>

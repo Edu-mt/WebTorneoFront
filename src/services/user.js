@@ -251,6 +251,25 @@ await axios.get("http://127.0.0.1:8081/traerTorneo")
      });console.log("console deleteTorneo en el post",data)  
    };
 
+   const addJornada=async (data) => {
+    await axios({
+       method: "post",
+       url: "http://127.0.0.1:8081/ganadoresJornada",
+       data: {
+        arrayGanadoresJornada: data,
+       },
+     });console.log("-----ENVIANDO AXIOS  GANADORES JORNADA -------", data)    
+   };
+
+  //  const deleteGanadores=async (data) => {
+  //   await axios({
+  //      method: "post",
+  //      url: "http://127.0.0.1:8081/EliminarGanadores",
+  //      data: {
+  //        nombreTorneo: data.nombreTorneo,
+  //      },       
+  //    });console.log("console deleteGanadores en el post",data)  
+  //  };
 
 export { addUser, getUser, addEquipos,traerEquipos,addJugador , subirImagen, addTorneo, traerTorneo, 
-  addGanador , changeGanador, addFoto , deleteTorneo };
+  addGanador , changeGanador, addFoto , deleteTorneo, addJornada };
