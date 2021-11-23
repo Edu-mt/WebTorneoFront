@@ -41,7 +41,7 @@ function CrearTorneo() {
       var a;
         for (a=0 ; a < arrayEquipos.length/2; a++) {
           var b = 2*a;
-          var objeto = { equipo1:arrayEquipos[b].nombreEquipo , equipo2:arrayEquipos[b+1].nombreEquipo}
+          var objeto = [arrayEquipos[b].nombreEquipo , arrayEquipos[b+1].nombreEquipo]
           equiposFinal.push(objeto);      
         }
         setArrayPartidas(equiposFinal);
@@ -84,12 +84,12 @@ function CrearTorneo() {
                     <div>                      
                         <tr>
                             <th>                            
-                                {data.equipo1}{"----"}
+                                {data[0]}{"----"}
                             </th>
                             <th>
                                 VS{"----"}
                             </th>
-                            <th>{data.equipo2}{" "}                            
+                            <th>{data[1]}{" "}                            
                             </th>                            
                             </tr>
                     </div>
