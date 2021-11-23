@@ -4,6 +4,7 @@ import {  useSelector  } from "react-redux";
 import { selectDataUser } from "../../../features/userSlice";
 import { addGanador , changeGanador } from "../../../services/user";
 import "./Calendario.css";
+import TablaTorneo from "./TablaTorneo";
 
 function VerTorneos() {
     const [mostrarTorneo, setMostrarTorneo] = useState([]);
@@ -67,8 +68,9 @@ function VerTorneos() {
      
     
     return (
+      
         <div>
-            
+   
         <div>
           {/* <div>{mostrarTorneo.nombreTorneo}</div> */}
           <div>
@@ -105,7 +107,10 @@ function VerTorneos() {
        {botones === true && (<button className="btnGnanador" onClick={enviarGanador}>Enviar Ganador</button>)}
        {botones === true && (<button className="btnGnanador" onClick={modificarGanador}>Modificar Ganador</button>)}
         </div>
+      
+        
     )
+    
 }
 
 export default VerTorneos
