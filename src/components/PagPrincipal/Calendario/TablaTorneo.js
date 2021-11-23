@@ -56,14 +56,27 @@ background-color:red;
 `; 
 
 function TablaTorneo() { 
-     
 
-  const jornadas = [ 
-    [["equipo1", "equipo2"], ["equipo3", "equipo4"], ["equipo5", "equipo6"], ["equipo7", "equipo8"]], 
-    [["equipo1", "equipo2"], ["equipo3", "equipo4"]], 
-    [["equipo1", "equipo2"]], 
-    [["equipo2"]] 
-  ]; 
+  const [jornadas, setJornadas] = useState([]); 
+  // const jornadas = [ 
+  //   [["equipo1", "equipo2"], ["equipo3", "equipo4"], ["equipo5", "equipo6"], ["equipo7", "equipo8"]], 
+  //   [["equipo1", "equipo2"], ["equipo3", "equipo4"]], 
+  //   [["equipo1", "equipo2"]], 
+  //   [["equipo2"]] 
+  // ]; 
+
+
+  useEffect( async() => { 
+      
+    const torneoTraido = await traerTorneo();
+
+    setJornadas(torneoTraido[0].jornadas)
+
+    
+  }, []);       
+
+
+ 
 
   const pintarCajasVacias = (index, numPartidos, jornada) => { 
     let numeroCajas = jornadas.length; 
