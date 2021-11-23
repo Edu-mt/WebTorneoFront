@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route, Link ,Redirect} from "react-rou
 import AltaUsuario from "./components/loggin/AltaUsuario";
 import Loggin from "./components/loggin/Loggin";
 import CajaDerecha from "./components/PagPrincipal/CajaDerecha/CajaDerecha";
-import Clasificacion from "./components/PagPrincipal/Clasificacion/Clasificacion";
 import Equipos from "./components/PagPrincipal/Equipos/Equipos";
 import HeaderPagPrincipal from "./components/PagPrincipal/Header/HeaderPagPrincipal";
 import Menu from "./components/PagPrincipal/Menu/Menu";
