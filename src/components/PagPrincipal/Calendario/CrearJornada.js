@@ -41,7 +41,7 @@ function FinalizarJornada() {
                     
                     for (a=0 ; a < ganadoresTorneo.length/2; a++) {
                         var b = 2*a;
-                        var objeto = {equipo1:ganadoresTorneo[b].resultados , equipo2:ganadoresTorneo[b+1].resultados}
+                        var objeto = [ganadoresTorneo[b].resultados , ganadoresTorneo[b+1].resultados]
                         equiposFinal.push(objeto);      
                     }
                     // setArrayGanadoresJornada(equiposFinal);      
@@ -51,7 +51,7 @@ function FinalizarJornada() {
                 }
                 if (ganadoresTorneo.length === 1 ){
                     const equiposFinal = [];                     
-                    var objeto = {equipo1:ganadoresTorneo[0].resultados}
+                    var objeto = [ganadoresTorneo[0].resultados]
                     equiposFinal.push(objeto);                        
                     const res = await addJornada(equiposFinal); 
                     console.log("--- ARRAY GANADORES despues----", equiposFinal); 

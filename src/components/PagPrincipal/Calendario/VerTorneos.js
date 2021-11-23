@@ -79,9 +79,9 @@ function VerTorneos() {
                 <>
                   <div>
                      <div className="tablaEquipos">
-                      <div className="equip">{equipos.equipo1}</div>
+                      <div className="equip">{equipos[0]}</div>
                       <div className="vs">{" "}{" "+"VS"+" "}{" "}</div>
-                      <div className="equip">{equipos.equipo2}{" "}</div><br/>
+                      <div className="equip">{equipos[1]}{" "}</div><br/>
                      </div>
                      
                     {datosUsuario.admin? (<select className="selectGnanador" value={resultados[index]} onChange={(event)=>cambiarResultado(event,index)}>
@@ -89,8 +89,8 @@ function VerTorneos() {
                     Esto es lo que dijo el profesor para que se quedase el valor si ya 
                     habian metido un resultado en la base de datos cuando cambiemos el estado de ganador*/}
                     <option selected >Seleccionar ganador</option>
-                        <option value={equipos.equipo1}>{equipos.equipo1}</option>
-                        <option value={equipos.equipo2}>{equipos.equipo2}</option>  
+                        <option value={equipos[0]}>{equipos[0]}</option>
+                        <option value={equipos[1]}>{equipos[1]}</option>  
                     </select>)  
                     :
                    <div></div>
