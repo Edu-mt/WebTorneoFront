@@ -70,7 +70,7 @@ function VerTorneos() {
     return (
       
         <div>
-   
+          <TablaTorneo/>
         <div>
           {/* <div>{mostrarTorneo.nombreTorneo}</div> */}
           <div>
