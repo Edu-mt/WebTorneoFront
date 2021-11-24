@@ -54,6 +54,7 @@
   .NombreEquipo{
     width: 32em;
     height: 3em;
+    color: gray;
     border-color: rgb(255, 123, 0);
     cursor: pointer;
   }

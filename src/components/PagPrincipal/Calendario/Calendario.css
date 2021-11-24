@@ -40,13 +40,12 @@
   border-style: inset;
   border-color: #ff7b00;
   border-width: 7px;
- 
-  width: 45em;
   padding: 20px;
 }
 .nomTorneo{
   width: 50em;
   height: 30px;
+  color: gray;
   border-color: rgb(255, 123, 0);
 }
 .tablaEquipos{
