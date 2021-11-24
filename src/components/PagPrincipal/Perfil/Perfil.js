@@ -45,12 +45,12 @@ function Perfil () {
     return (
       <div className="cajaPerfil">
         <div className="cajaFotoPerfil">
-        <label className="" type="button">
-         Añadir foto de perfil
+        <label className="?" type="button">
+         <p className="añadirAvatar">-Añadir foto-</p>
           <input
+            className="imputAvatar"
             type="file"
             ref={myFileField}
-            className="cargarFoto"
             onChange={actualizarImagen}
           />
         </label>
@@ -58,9 +58,9 @@ function Perfil () {
         <div className="fotoPerfil" style={{ backgroundImage: `url(${foto.foto})`}}></div>
         <button onClick={() => enviarFoto()} className="btnEnviarFoto" >Guardar avatar</button>
       </div>
-            <div>equipo:{datosUsuario.nombreEquipo}</div>
-            <div>nombre:{datosUsuario.nombre}</div>
-            <div>{datosUsuario.email}</div>
+            <div className="perfil">equipo:{datosUsuario.nombreEquipo}</div>
+            <div className="perfil">nombre:{datosUsuario.nombre}</div>
+            <div className="perfil">{datosUsuario.email}</div>
             <div className="fotoGrande" style={{ backgroundImage: `url(${datosUsuario.avatar})`}}> </div>
       </div>
     );

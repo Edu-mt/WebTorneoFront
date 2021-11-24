@@ -78,13 +78,17 @@
 
   }
   .imputLogo{
-    background-image: url(./pngLogo.png);
+    
     width: 227px;
     height: 224px;
     margin-right: 50px;
     margin-top: 85px;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .imagenLogo{
+
   }
 
   .CajaUnirseEquipo{

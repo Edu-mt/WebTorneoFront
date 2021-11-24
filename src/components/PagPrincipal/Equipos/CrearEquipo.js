@@ -66,18 +66,6 @@ function CrearEquipo() {
         name="nombreEquipo"
         onChange={(e) => setNombreEquipo(e.target.value)}
       />
-      
-     
-      <label className="" type="button">
-         Añadir foto de equipo
-          <input
-            type="file"
-            ref={myFileField}
-            className="cargarFoto"
-            onChange={actualizarImagen}
-          />
-        </label>
-        <div className="fotoPerfil" style={{ backgroundImage: `url(${logo.logo})`}}></div>
        <br/>
        <p>Asignar color1</p>
        <input
@@ -103,7 +91,16 @@ function CrearEquipo() {
        {/* <button type="submit" className="btn btn-dark" onClick={()=>submit()}>Save</button> este es el submit bueno del profesor */}
       <button onClick={enviarDatosEquipos} className="btnCrearEquipo">Crear Equipo</button>
       </div>
-      <div className="imputLogo"></div>
+      <label className="imputLogo" type="button">
+         Añadir logo de equipo
+          <input
+            type="file"
+            ref={myFileField}
+            className="cargarFoto"
+            onChange={actualizarImagen}
+          />
+        </label>
+        <div className="fotoPerfil" style={{ backgroundImage: `url(${logo.logo})`}}></div>
       </div>
   );
 }

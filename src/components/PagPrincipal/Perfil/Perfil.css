@@ -1,11 +1,26 @@
-.Perfil{
-    text-align: center;
-    font-size: xxx-large;
-  }
+
 .cajaPerfil{
   
 }
-
+.añadirAvatar{
+ color: #ff7b00;
+ font-size: 25px;
+ margin-bottom: 10px;
+}
+.imputAvatar{
+  color: rgb(255, 123, 0);
+  width: 50em;
+  height: 35px;
+  border-color: rgb(255, 123, 0);
+}
+.btnEnviarFoto{
+  color: #212121;
+  border-color: rgb(255, 123, 0);
+  background-color: rgba(87, 87, 87, 0.918);
+}
+.perfil{
+  
+}
 .btnPerfil{
   color:crimson ;
 }
