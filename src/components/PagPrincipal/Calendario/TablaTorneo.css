@@ -1,0 +1,68 @@
+.torneo{
+
+}
+
+.ronda{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+  margin-top: 20px;
+}
+
+.enfrentamiento{
+    background-color: #3e3d3d8a;
+    border-style: ridge;
+    border-color: #ff7b00;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+.equipo1{
+    color: #ff9800;
+  padding: 10px;
+  
+}
+
+.VS{
+ 
+    padding: 10px;
+    color: #b0b0b0;
+}
+
+.padreBorder{
+  height: 70px;
+  width: 100px;
+  border-style: solid;
+  border-left: none;
+}
+.hijoBorder1{
+
+}
+.hijoBorder2{
+
+}
+
+.padreBorder2{
+  background-color: black;
+  width: 100px;
+  height: 2px;
+
+}
+.padreBorder3{
+  background-color: black;
+  width: 100px;
+  height: 2px;
+
+}
+
+.conectorVerticalArriba{
+  background-color: black;
+  width: 3px;
+  height: 100px;
+}

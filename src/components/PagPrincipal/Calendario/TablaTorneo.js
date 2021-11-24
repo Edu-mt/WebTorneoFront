@@ -2,6 +2,7 @@ import axios from "axios"
 import { traerTorneo } from "../../../services/user";
 import { useState,useEffect } from 'react'; 
 import styled from 'styled-components' 
+import "./TablaTorneo.css";
 
 
 
@@ -11,7 +12,7 @@ display:flex;
 
 const WrapJornada = styled.div` 
 justify-content: center; 
-align-items: center; 
+align-items: flex-end;
 display: flex; 
 flex-direction: column; 
 margin:10px 
@@ -38,32 +39,26 @@ justify-content:center;
 `; 
 
 const CajaVaciaBordes = styled.div` 
-height:50px; 
-border-bottom:2px solid red; 
-border-top:2px solid red; 
-width:50px; 
-border-right:2px solid red; 
+border-bottom: 2px solid #f6f6f6;
+border-top: 2px solid #f6f6f6;
+height: 143px;
+width: 39px;
+border-right: 2px solid #f6f6f6;
 `; 
 
 const CajaVaciaSinBordes = styled.div` 
-height:${props => props.posicion === 0 ? '0px' : '50px'}; 
+height:${props => props.posicion === 0 ? '0px' : '178px'}; 
 width:50px; 
 `; 
 
 const Linea = styled.div` 
 height:2px; 
-background-color:red; 
+background-color:#f6f6f6; 
 `; 
 
 function TablaTorneo() { 
 
   const [jornadas, setJornadas] = useState([]); 
-  // const jornadas = [ 
-  //   [["equipo1", "equipo2"], ["equipo3", "equipo4"], ["equipo5", "equipo6"], ["equipo7", "equipo8"]], 
-  //   [["equipo1", "equipo2"], ["equipo3", "equipo4"]], 
-  //   [["equipo1", "equipo2"]], 
-  //   [["equipo2"]] 
-  // ]; 
 
 
   useEffect( async() => { 
@@ -87,13 +82,16 @@ function TablaTorneo() {
       <Cajasvacias altura={index}> 
         {/* <div style={{height:"10px"}} /> */} 
         {jornadas[index].map((d, index) => { 
-          if (numPartidos === 1) { 
+          if (numPartidos === 1){
+             
             return ( 
-              <Linea></Linea> 
+             
+              <Linea/>
+              
             ) 
           } 
-          else if (jornada[0][1] === undefined) { 
-            return null; 
+          else if ((numPartidos === 1)&& (jornada[1] === null)){ 
+            return jornada[0]; 
           } 
           else { 
             return ( 
@@ -117,9 +115,13 @@ function TablaTorneo() {
     return ( 
       jornada[1] ? 
         <Partido> 
-          <div> 
-            {jornada[0] + " versus " + jornada[1]} 
+        
+          <div className="enfrentamiento"> 
+          <div className="equipo1">{jornada[0]}</div>
+          <div className="VS"> VS </div>
+          <div className="equipo1">{jornada[1]}</div>
           </div> 
+         
         </Partido> 
         : 
         <div> 
