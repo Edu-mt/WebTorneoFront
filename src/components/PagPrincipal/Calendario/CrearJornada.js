@@ -4,29 +4,28 @@ import "./Calendario.css";
 
 function FinalizarJornada() {
     
-    const [arrayGanadoresJornada, setArrayGanadoresJornada,] = useState([]);
-    const [infoTorneo, setInfoTorneo,] = useState([]);
+    // const [arrayGanadoresJornada, setArrayGanadoresJornada,] = useState([]);
+    // const [infoTorneo, setInfoTorneo,] = useState([]);
 
-    useEffect( async() => { 
+    // useEffect( async() => { 
         
-        const torneo = await traerTorneo();
-        setInfoTorneo(torneo);
-      }, []);   
+    //     const torneo = await traerTorneo();
+    //     setInfoTorneo(torneo);
+    //   }, []);   
         
-    //   console.log("--- nombreTorneoJornada 1----", nombreTorneoJornada);         
 
       const enviarDatos = async (event) => {
-
-        if(infoTorneo!=0){
+        const torneo = await traerTorneo();
+        if(torneo!=0){
 
             
-        const jornadasTorneo = infoTorneo[0].jornadas;
+        const jornadasTorneo = torneo[0].jornadas;
         let j = jornadasTorneo.length-1;
-        const ultimaJornada = infoTorneo[0].jornadas[j];
+        const ultimaJornada = torneo[0].jornadas[j];
         let jornadaLength = ultimaJornada.length;
 
-            if(infoTorneo[0].ganadores.length === jornadaLength){
-                const ganadoresTorneo = infoTorneo[0].ganadores;
+            if(torneo[0].ganadores.length === jornadaLength){
+                const ganadoresTorneo = torneo[0].ganadores;
                 console.log("GANADORES TORNEO ANTES DEL LENGTH", ganadoresTorneo); 
 
                 if(ganadoresTorneo.length%2 ==0 && ganadoresTorneo.length != 0 ){
