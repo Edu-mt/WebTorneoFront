@@ -57,5 +57,65 @@
   }
   .linkRegistrar{
     color:#62a1d8;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+  @media (max-width:640px){
+    .fondo{
+      background-image: url(./callLogginmovil.jpg);
+      position:absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  
+    .cajaLogin {
+
+      position: relative;
+      left: 107px;
+      border-color: rgb(209 105 53);
+      background-color: #9e9e9e1f;
+    }
+
+    .tituloLoggin{
+      color: #eb6611;
+    }
+
+  
+    .inputLogin{
+      display: contents;
+      color: #eb6611;
+    
+    
+    }
+  
+    .nomPass{
+      color: #757575;
+   
+    }
+  
+    .btnLogin{
+      background-color: rgb(209 105 53);
+    }
+    .btnLogin:hover{
+      background-color: rgb(29 177 92);
+      width: 182px;
+      
+    }
+    .linkRegistrar{
+      color: #e3ab0e;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+}
+

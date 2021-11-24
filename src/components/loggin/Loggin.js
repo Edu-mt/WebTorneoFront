@@ -56,14 +56,14 @@ let reset = () => {
   return ( 
     <div className="fondo">
     <div className="cajaLogin"> 
-          <div><h2>INICIA SESION</h2></div>
+          <div><h2 className="tituloLoggin">INICIA SESION</h2></div>
       <div className="inputLogin">
       <input className="nomPass" type="text" value={nombre} placeholder="nombre" name="nombre" onChange={(e) => setNombre(e.target.value)} />
       <input className="nomPass" type="password" value={password} placeholder="password" name="password" onChange={(e) => setPassword(e.target.value)} /> 
       </div>
        <button className="btnLogin" onClick={realizarLogin}>Iniciar Sesion</button>
       <div className="linkRegistrar"> 
-        si aun no esta registrado: <br/>
+        si aun no esta registrado <br/>
       <Link to="/AltaUsuario" >registrate aqui</Link>
       </div>
     </div> 
