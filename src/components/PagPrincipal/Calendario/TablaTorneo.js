@@ -290,7 +290,7 @@ function TablaTorneo() {
   ); 
 } 
 
-export default TablaTorneo; 
+// export default TablaTorneo; 
 
 // import axios from "axios" 
 // import { traerTorneo } from "../../../services/user";
