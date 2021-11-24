@@ -10,8 +10,22 @@ const Wrapper = styled.div`
 display:flex; 
 `; 
 
-const WrapJornada = styled.div` 
-justify-content: center; 
+const WrapJornada8 = styled.div` 
+justify-content:center; 
+align-items: flex-end;
+display: flex; 
+flex-direction: column; 
+margin:10px 
+`; 
+const WrapJornada16 = styled.div` 
+justify-content:center; 
+align-items: flex-end;
+display: flex; 
+flex-direction: column; 
+margin:10px 
+`; 
+const WrapJornada32 = styled.div` 
+justify-content:center; 
 align-items: flex-end;
 display: flex; 
 flex-direction: column; 
@@ -29,7 +43,23 @@ margin-bottom:15px;
 margin-top:15px; 
 `; 
 
-const Cajasvacias = styled.div` 
+const Cajasvacias8 = styled.div` 
+width:40px; 
+// height:100px; 
+display:flex; 
+flex-direction:column; 
+// margin-top:5px; 
+justify-content:center; 
+`; 
+const Cajasvacias16 = styled.div` 
+width:40px; 
+// height:100px; 
+display:flex; 
+flex-direction:column; 
+// margin-top:5px; 
+justify-content:center; 
+`; 
+const Cajasvacias32 = styled.div` 
 width:40px; 
 // height:100px; 
 display:flex; 
@@ -38,7 +68,21 @@ flex-direction:column;
 justify-content:center; 
 `; 
 
-const CajaVaciaBordes = styled.div` 
+const CajaVaciaBordes8 = styled.div` 
+border-bottom: 2px solid #f6f6f6;
+border-top: 2px solid #f6f6f6;
+height: 143px;
+width: 39px;
+border-right: 2px solid #f6f6f6;
+`; 
+const CajaVaciaBordes16 = styled.div` 
+border-bottom: 2px solid #f6f6f6;
+border-top: 2px solid #f6f6f6;
+height: 143px;
+width: 39px;
+border-right: 2px solid #f6f6f6;
+`; 
+const CajaVaciaBordes32 = styled.div` 
 border-bottom: 2px solid #f6f6f6;
 border-top: 2px solid #f6f6f6;
 height: 143px;
@@ -46,7 +90,15 @@ width: 39px;
 border-right: 2px solid #f6f6f6;
 `; 
 
-const CajaVaciaSinBordes = styled.div` 
+const CajaVaciaSinBordes8 = styled.div` 
+height:${props => props.posicion === 0 ? '0px' : '178px'}; 
+width:50px; 
+`; 
+const CajaVaciaSinBordes16 = styled.div` 
+height:${props => props.posicion === 0 ? '0px' : '178px'}; 
+width:50px; 
+`; 
+const CajaVaciaSinBordes32 = styled.div` 
 height:${props => props.posicion === 0 ? '0px' : '178px'}; 
 width:50px; 
 `; 
@@ -59,18 +111,31 @@ background-color:#f6f6f6;
 function TablaTorneo() { 
 
   const [jornadas, setJornadas] = useState([]); 
+  const[vista8,setVista8]=useState(false);
+  const[vista16,setVista16]=useState(false);
+  const[vista32,setVista32]=useState(false);
+  console.log("AQUI ",vista8)
+  console.log("AQUI JORNADAS",jornadas)
 
 
   useEffect( async() => { 
    
     const torneoTraido = await traerTorneo();
+    console.log("torneo Traido",torneoTraido)
     if(torneoTraido!=0){
-    setJornadas(torneoTraido[0].jornadas)}
-
+    setJornadas(torneoTraido[0].jornadas)
+    if(torneoTraido[0].jornadas[0].length === 4){
+      setVista8(true)
+    }else if(torneoTraido[0].jornadas[0].length === 8){
+      setVista16(true)
+    }else if(torneoTraido[0].jornadas[0].length===16){
+      setVista32(true)
+    }
+  };
     
   }, []);       
 
-
+  
  
 
   const pintarCajasVacias = (index, numPartidos, jornada) => { 
@@ -85,13 +150,14 @@ function TablaTorneo() {
           if (numPartidos === 1){
              
             return ( 
-             
-              <Linea/>
-              
+              jornada.length===2?
+              <Linea></Linea>
+              :
+              ""
             ) 
-          } 
-          else if ((numPartidos === 1)&& (jornada[1] === null)){ 
-            return jornada[0]; 
+          // } 
+          // else if (jornada[0][1] === []) { 
+          //   return jornada[0][1]; 
           } 
           else { 
             return ( 
@@ -110,7 +176,7 @@ function TablaTorneo() {
  
  
 
-  const pintarJornada = (jornada) => { 
+  const pintarJornada8 = (jornada) => { 
     console.log(jornada) 
     return ( 
       jornada[1] ? 
@@ -124,8 +190,52 @@ function TablaTorneo() {
          
         </Partido> 
         : 
-        <div> 
-          {jornada[0]} 
+
+        <div className="ganador"> 
+          <div className="tituloGanador">¡GANADOR!</div> <br/>
+          <div className="equipoGanador">{jornada[0]}</div>
+        </div> 
+    ) 
+  } 
+  const pintarJornada16 = (jornada) => { 
+    console.log(jornada) 
+    return ( 
+      jornada[1] ? 
+        <Partido> 
+        
+          <div className="enfrentamiento-16"> 
+          <div className="equipo1-16">{jornada[0]}</div>
+          <div className="VS-16"> VS </div>
+          <div className="equipo1-16">{jornada[1]}</div>
+          </div> 
+         
+        </Partido> 
+        : 
+
+        <div className="ganador-16"> 
+          <div className="tituloGanador-16">¡GANADOR!</div> <br/>
+          <div className="equipoGanador-16">{jornada[0]}</div>
+        </div> 
+    ) 
+  } 
+  const pintarJornada32 = (jornada) => { 
+    console.log(jornada) 
+    return ( 
+      jornada[1] ? 
+        <Partido> 
+        
+          <div className="enfrentamiento-32"> 
+          <div className="equipo1-32">{jornada[0]}</div>
+          <div className="VS-32"> VS </div>
+          <div className="equipo1-32">{jornada[1]}</div>
+          </div> 
+         
+        </Partido> 
+        : 
+
+        <div className="ganador-32"> 
+          <div className="tituloGanador-32">¡GANADOR!</div> <br/>
+          <div className="equipoGanador-32">{jornada[0]}</div>
         </div> 
     ) 
   } 
@@ -135,16 +245,44 @@ function TablaTorneo() {
       {jornadas.map((jornada, index) => { 
         console.log(jornada.length) 
         let numPartidos = jornada.length; 
-        return ( 
+        return (         
           <> 
-            <WrapJornada> 
+          {vista8===true &&(
+            <>
+            <WrapJornada8> 
               {jornada.map((data) => { 
                 return ( 
-                  pintarJornada(data) 
+                   pintarJornada8(data) 
                 ) 
               })} 
-            </WrapJornada> 
+            </WrapJornada8>
             {pintarCajasVacias(index, numPartidos, jornada)} 
+            </>
+          )}
+             {vista16===true &&(
+            <>
+            <WrapJornada16> 
+              {jornada.map((data) => { 
+                return ( 
+                   pintarJornada16(data) 
+                ) 
+              })} 
+            </WrapJornada16>
+            {pintarCajasVacias(index, numPartidos, jornada)} 
+            </>
+          )}
+             {vista32===true &&(
+            <>
+            <WrapJornada32> 
+              {jornada.map((data) => { 
+                return ( 
+                   pintarJornada32(data) 
+                ) 
+              })} 
+            </WrapJornada32>
+            {pintarCajasVacias(index, numPartidos, jornada)} 
+            </>
+          )}
           </> 
         ) 
       })} 
@@ -153,3 +291,159 @@ function TablaTorneo() {
 } 
 
 export default TablaTorneo; 
+
+// import axios from "axios" 
+// import { traerTorneo } from "../../../services/user";
+// import { useState,useEffect } from 'react'; 
+// import styled from 'styled-components' 
+// import "./TablaTorneo.css";
+
+
+
+// const Wrapper = styled.div` 
+// display:flex; 
+// `; 
+
+// const WrapJornada = styled.div` 
+// justify-content: center; 
+// align-items: flex-end;
+// display: flex; 
+// flex-direction: column; 
+// margin:10px 
+// `; 
+
+ 
+ 
+
+// const Jornada = styled.div` 
+// `; 
+
+// const Partido = styled.div` 
+// margin-bottom:15px; 
+// margin-top:15px; 
+// `; 
+
+// const Cajasvacias = styled.div` 
+// width:40px; 
+// // height:100px; 
+// display:flex; 
+// flex-direction:column; 
+// // margin-top:5px; 
+// justify-content:center; 
+// `; 
+
+// const CajaVaciaBordes = styled.div` 
+// border-bottom: 2px solid #f6f6f6;
+// border-top: 2px solid #f6f6f6;
+// height: 143px;
+// width: 39px;
+// border-right: 2px solid #f6f6f6;
+// `; 
+
+// const CajaVaciaSinBordes = styled.div` 
+// height:${props => props.posicion === 0 ? '0px' : '178px'}; 
+// width:50px; 
+// `; 
+
+// const Linea = styled.div` 
+// height:2px; 
+// background-color:#f6f6f6; 
+// `; 
+
+// function TablaTorneo() { 
+
+//   const [jornadas, setJornadas] = useState([]); 
+
+
+//   useEffect( async() => { 
+   
+//     const torneoTraido = await traerTorneo();
+//     if(torneoTraido!=0){
+//     setJornadas(torneoTraido[0].jornadas)}
+
+    
+//   }, []);       
+
+
+ 
+
+//   const pintarCajasVacias = (index, numPartidos, jornada) => { 
+//     let numeroCajas = jornadas.length; 
+//     console.log(numPartidos) 
+//     console.log(jornada) 
+
+//     return ( 
+//       <Cajasvacias altura={index}> 
+//         {/* <div style={{height:"10px"}} /> */} 
+//         {jornadas[index].map((d, index) => { 
+//           if (numPartidos === 1){
+             
+//             return ( 
+             
+//               <Linea/>
+              
+//             ) 
+//           } 
+//           else if ((numPartidos === 1)&& (jornada[1] === null)){ 
+//             return jornada[0]; 
+//           } 
+//           else { 
+//             return ( 
+//               index % 2 === 0 && 
+//               <> 
+//                 <CajaVaciaSinBordes posicion={index}></CajaVaciaSinBordes> 
+//                 <CajaVaciaBordes></CajaVaciaBordes> 
+//               </> 
+//             ) 
+//           } 
+//         })} 
+//       </Cajasvacias> 
+//     ) 
+//   } 
+
+ 
+ 
+
+//   const pintarJornada = (jornada) => { 
+//     console.log(jornada) 
+//     return ( 
+//       jornada[1] ? 
+//         <Partido> 
+        
+//           <div className="enfrentamiento"> 
+//           <div className="equipo1">{jornada[0]}</div>
+//           <div className="VS"> VS </div>
+//           <div className="equipo1">{jornada[1]}</div>
+//           </div> 
+         
+//         </Partido> 
+//         : 
+//         <div> 
+//           {jornada[0]} 
+//         </div> 
+//     ) 
+//   } 
+
+//   return ( 
+//     <Wrapper className="wrapper" > 
+//       {jornadas.map((jornada, index) => { 
+//         console.log(jornada.length) 
+//         let numPartidos = jornada.length; 
+//         return ( 
+//           <> 
+//             <WrapJornada> 
+//               {jornada.map((data) => { 
+//                 return ( 
+//                   pintarJornada(data) 
+//                 ) 
+//               })} 
+//             </WrapJornada> 
+//             {pintarCajasVacias(index, numPartidos, jornada)} 
+//           </> 
+//         ) 
+//       })} 
+//     </Wrapper> 
+//   ); 
+// } 
+
+// export default TablaTorneo; 
