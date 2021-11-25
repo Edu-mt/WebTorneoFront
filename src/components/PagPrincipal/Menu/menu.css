@@ -1,4 +1,4 @@
-.MenuPrincipal {
+.Menu{
   color: aliceblue;
   display: flex;
   border-color: rgb(124, 123, 123);
@@ -7,7 +7,7 @@
   height: 804px;
   flex-direction: column;
   align-items: center;
-  }
+}
 
   .btnMenu{
     color: white;
@@ -41,17 +41,54 @@
 }
 
   @media (max-width:640px){
-    .MenuPrincipal {
-
-      width: 100%;
-      height: 86px;
+    .Menu{
+      width: 446px;
+      height: 86px; 
+      display: flex;
       flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: stretch;
+      align-content: stretch;
+      position: relative;
+      border: none;  
+    }
+    
 
-      }
       .btnMenu{
       display:none;
       }
       .imgIzq{
         display:none;
+      }
+
+      .btnNoticiasResponsiveMovil{
+        background-image: url(./icononoticias.png);
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 20px;
+        cursor: pointer;
+    
+      }
+      .btnPerfilResponsiveMovil{
+        background-image: url(./icononoticias.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .btnEquiposResponsiveMovil{
+        background-image: url(./icononoticias.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .btnCalendarioResponsiveMovil{
+        background-image: url(./icononoticias.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .imgIzqResponsiveMovil{
+        
       }
   }

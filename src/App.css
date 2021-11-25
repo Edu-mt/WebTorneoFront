@@ -54,5 +54,6 @@ font-family: 'Archivo Black', sans-serif;
     border-width: 6px;
     border-style: ridge;
     border-color: #7c7b7b;
+    width: 100%;
   }
 }
