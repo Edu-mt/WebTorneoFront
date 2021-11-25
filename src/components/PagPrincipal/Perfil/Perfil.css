@@ -1,18 +1,19 @@
 
-.cajaPerfil{
+.cajaPerfil {
   background-color: #292929c7;
-  height: 600px;
+  height: 650px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
   align-content: flex-start;
-  margin-top: 0px;
+  margin-top: 70px;
   border-style: ridge;
   border-color: #ff7b00;
   border-width: 7px;
   padding: 20px;
+  width: 500px;
 }
 .cajaFotoPerfil{
   background-color: #292929c7;
@@ -102,7 +103,7 @@
     justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
-    margin-top: 70px;
+    margin-top: 0px;
     border-style: ridge;
     border-color: #ff7b00;
     border-width: 7px;
