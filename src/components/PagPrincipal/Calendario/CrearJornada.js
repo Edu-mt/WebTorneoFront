@@ -16,9 +16,7 @@ function FinalizarJornada() {
 
       const enviarDatos = async (event) => {
         const torneo = await traerTorneo();
-        if(torneo!=0){
-
-            
+        if(torneo!=0){ 
         const jornadasTorneo = torneo[0].jornadas;
         let j = jornadasTorneo.length-1;
         const ultimaJornada = torneo[0].jornadas[j];
