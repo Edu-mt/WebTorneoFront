@@ -43,3 +43,16 @@ font-family: 'Archivo Black', sans-serif;
   border-style: ridge;
   border-color: #7c7b7b;
 }
+
+@media (max-width:640px){
+  .cuerpo{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-width: 6px;
+    border-style: ridge;
+    border-color: #7c7b7b;
+  }
+}
