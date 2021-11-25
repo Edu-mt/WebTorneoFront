@@ -103,6 +103,7 @@ function CrearEquipo() {
         </label>
         <div className="logoEquipo" style={{ backgroundImage: `url(${logo.logo})`}}></div>
         </div>
+        <button onClick={enviarDatosEquipos} className="btnResponsiveCrearEquipo">Crear Equipo</button>
       </div>
   );
 }

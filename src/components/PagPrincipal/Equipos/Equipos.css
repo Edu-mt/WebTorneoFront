@@ -184,3 +184,104 @@
     color: #ffffff;
     background-color: rgb(75, 73, 72);
   }
+  /* .btnResponsiveCrearEquipo{
+    display: none;
+  } */
+
+  @media (max-width:640px){
+   
+    .Equipos{
+      background-image: url(./call4.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        padding: 20px;
+        border-style: inset;
+        border-color: #ff7b00;
+        border-width: 7px;
+        height: 350px;
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        margin-top: 0px;
+      }
+      .creaUne{
+        display: flex;
+        flex-direction: column;
+      }
+      .btnEquipos{
+        color: white;
+        width: 18em;
+        height: 55px;
+        background-color: rgba(87, 87, 87, 0.918);
+        border-color: rgb(255, 123, 0);
+        cursor: pointer;
+        margin-right: 135px;
+        margin-left: 135px;
+      }
+      .btnEquipos:hover{
+        background-color: rgb(75, 73, 72);
+        border-color: rgb(255, 123, 0);
+      }
+
+
+      .CajaCrearEquipo{
+        background-color: #292929c7;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        margin-top: 0px;
+        border-style: inset;
+        border-color: #ff7b00;
+        border-width: 7px;
+        height: 750px;
+        width: 500px;
+        padding: 20px;
+    
+      }
+      .cajaAñadirLogoEquipo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: center;
+        margin-right: 126px;
+      }
+      .crearColum{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: baseline;
+        align-content: flex-start;
+        border-right: #ff7b00;
+        border-left: none;
+        border-top: none;
+        border-bottom: none;
+        padding-right: 16px;
+        margin-top: 10px;
+      }
+      .btnCrearEquipo{
+        display: none;
+      }
+      .btnResponsiveCrearEquipo{
+        color: white;
+        width: 18em;
+        height: 55px;
+        background-color: rgba(87, 87, 87, 0.918);
+        border-color: rgb(255, 123, 0);
+        cursor: pointer;
+      }
+      .btnResponsiveCrearEquipo:hover{
+        background-color: rgb(75, 73, 72);
+        border-color: rgb(255, 123, 0);
+    
+      }
+  }
