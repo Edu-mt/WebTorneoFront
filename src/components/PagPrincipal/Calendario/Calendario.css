@@ -30,6 +30,7 @@
 }
 .cajaCalendario{
   background-color: #292929c7;
+  height: 600px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
