@@ -40,13 +40,30 @@ function VerTorneos() {
         prueba.splice(0, 1, event.target.value); 
         // prueba.push(event.target.value)  
         setResultados(prueba);
-        // console.log("PROBANDO LA PRUEBA",resultados);
+        console.log("PROBANDO LA PRUEBA",resultados);
         setBotones(true);
         // console.log("index cambiarResultado",index);
         setIndice(index);
       };
       
+      
       const enviarGanador = async(event) => {
+        var perdedor;
+        console.log("JORNADARECIENTE" , jornadaReciente[0][0])
+
+        for(let z=0 ; z < jornadaReciente.length ; z++){
+          if(resultados[0] === jornadaReciente[z][0] || resultados[0] === jornadaReciente[z][1] ){
+            if(resultados[0] === jornadaReciente[z][0]){
+              perdedor = jornadaReciente[z][1];
+            }
+            else{
+              perdedor = jornadaReciente[z][0];
+            }
+          }
+        }        
+        console.log("PERDEDOR" , perdedor);
+        const texto = ["el equipo" + resultados + " ha ganado contra" + perdedor];
+        console.log(texto);
         const data = {
           resultados: resultados,
           indice: indice,

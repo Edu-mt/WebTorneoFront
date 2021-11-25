@@ -189,6 +189,7 @@ await axios.get("http://127.0.0.1:8081/traerTorneo")
   };
 
   const addGanador=async (data) => {
+    console.log("----- SEGUNDO ENVIANDO AXIOS ADD GANADOR AL SERVIDOR-------",data)
     await axios({
        method: "post",
        url: "http://127.0.0.1:8081/enviarGanador",
@@ -196,7 +197,7 @@ await axios.get("http://127.0.0.1:8081/traerTorneo")
         resultados: data.resultados[0],
         indice: data.indice,
        },
-     }); console.log("----- SEGUNDO ENVIANDO AXIOS ADD GANADOR AL SERVIDOR-------",data)
+     }) 
     
      .then(function (response, err) {
       console.log(err);     
