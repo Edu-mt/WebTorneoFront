@@ -15,18 +15,20 @@ export default function HeaderPagPrincipal() {
     return (
     <>
     <div className="buscadorPrincipal"> 
-      <div>
+    <div className="cajaCerrarSesionResponsive">
+    <div className="tituloCerrarSesionResponsive">cerrar sesion</div>
+    <div className="iconoCerrarSesionResponsive" onClick={cerrarSesion}></div>
+    </div>
+      <div className="cajaLogo">
         <div className="logo"></div>
         </div>
           <div>
           <div className="Titulo"></div>
         </div>
           <div className="ZonaUsuario">
-          <div className="fotoPerfil" style={{ backgroundImage: `url(${datosUsuario.avatar})`}}></div> 
-          <div className="Usuario">
-            <p>{datosUsuario.nombre}</p>
-            </div> 
-            <button onClick={cerrarSesion}>cerrar sesion</button>      
+          <div className="Usuario"><p>{datosUsuario.nombre}</p></div> 
+          <div className="fotoPerfilHeader" style={{ backgroundImage: `url(${datosUsuario.avatar})`}}></div>        
+          <button className="btnCerrarSesion" onClick={cerrarSesion}>cerrar sesion</button>      
         </div>
     </div>
        
