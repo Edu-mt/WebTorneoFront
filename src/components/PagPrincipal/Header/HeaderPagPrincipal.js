@@ -28,6 +28,7 @@ export default function HeaderPagPrincipal() {
             </div> 
             <button onClick={cerrarSesion}>cerrar sesion</button>      
         </div>
+        <div className="imagenAbajo"></div>
     </div>
        
     </>

@@ -10,6 +10,7 @@ font-family: 'Archivo Black', sans-serif;
   background: url(./img/mapamundo.jpg);
   position:relative;
   background-repeat: no-repeat;
+  background-size: cover;
   height: 106vh;
   width: 100%;
 }
