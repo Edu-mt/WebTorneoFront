@@ -11,7 +11,7 @@ font-family: 'Archivo Black', sans-serif;
   position:relative;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 106vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -42,6 +42,7 @@ font-family: 'Archivo Black', sans-serif;
   border-width: 6px;
   border-style: ridge;
   border-color: #7c7b7b;
+  height: 100%;
 }
 
 @media (max-width:640px){
