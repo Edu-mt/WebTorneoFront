@@ -91,16 +91,18 @@ function CrearEquipo() {
        {/* <button type="submit" className="btn btn-dark" onClick={()=>submit()}>Save</button> este es el submit bueno del profesor */}
       <button onClick={enviarDatosEquipos} className="btnCrearEquipo">Crear Equipo</button>
       </div>
-      <label className="imputLogo" type="button">
-         Añadir logo de equipo
+      <div className="cajaAñadirLogoEquipo">
+      <label className="añadirLogo" type="button">
+         <p>Añadir logo de equipo</p>
           <input
+           className="imputLogoEquipo"
             type="file"
-            ref={myFileField}
-            className="cargarFoto"
+            ref={myFileField}          
             onChange={actualizarImagen}
           />
         </label>
-        <div className="fotoPerfil" style={{ backgroundImage: `url(${logo.logo})`}}></div>
+        <div className="logoEquipo" style={{ backgroundImage: `url(${logo.logo})`}}></div>
+        </div>
       </div>
   );
 }

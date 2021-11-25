@@ -46,8 +46,8 @@
     border-style: inset;
     border-color: #ff7b00;
     border-width: 7px;
-    height: 350px;
-    width: 45em;
+    height: 370px;
+    width: 850px;
     padding: 20px;
 
   }
@@ -77,18 +77,51 @@
     border-color: rgb(255, 123, 0);
 
   }
-  .imputLogo{
+  .cajaAñadirLogoEquipo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-right: 17px;
+  }
+  .añadirLogo{
     
     width: 227px;
-    height: 224px;
-    margin-right: 50px;
-    margin-top: 85px;
+    height: 99px;
+    margin-right: 104px;
+    margin-top: -50px;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  .imagenLogo{
+  .imputLogoEquipo{
 
+  }
+
+  .logoEquipo{
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    height: 250px;
+    border-style: ridge;
+    border-color: #ff7b00;   
+  }
+  .crearColum{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+    border-right: #ff7b00;
+    border-style: ridge;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    padding-right: 16px;
+    margin-top: 10px;
   }
 
   .CajaUnirseEquipo{
@@ -97,14 +130,15 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     margin-top: 70px;
     border-style: inset;
     border-color: #ff7b00;
     border-width: 7px;
-    height: 350px;
-    width: 45em;
+    width: 700px;
+    height: 600px;
     padding: 20px;
+    overflow-y: scroll;
   }
 .inputBuscEquip{
   color: #803939;
@@ -112,10 +146,39 @@
   height: 35px;
   border-color: rgb(255, 123, 0);
 }
+.cajaNombreYBtnUnirseEquipo{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+}
+.nombreUnirseEquipo{
+  border-style: ridge;
+  border-width: 1px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 3px;
+  height: 25px;
+  width: 15%;
+  color: #9f9f9f;
+  border-color: #ff7b00;
+}
+.equipoUnirseEquipo{
+  height: 25px;
+    border-style: ridge;
+    border-width: 1px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 3px;
+    width: 65%;
+    border-color: #ff7b00;
+}
   .btnUnirseEquipo{
     color: #212121;
     border-color: rgb(255, 123, 0);
     background-color: rgba(87, 87, 87, 0.918);
+    height: 35px;
+    width: 20%;
   }
   .btnUnirseEquipo:hover{
     color: #ffffff;

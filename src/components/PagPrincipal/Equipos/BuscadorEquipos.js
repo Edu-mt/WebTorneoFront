@@ -66,17 +66,17 @@ function BuscadorEquipos() {
       resultBusqueda.map((data, index) => {
         return (
           <>
-            <div className="">
-              <div>
-                Nombre: {data.nombreEquipo}{" "}
+            <div className="cajaNombreYBtnUnirseEquipo">             
+              {/* <div className="cajaNombreUnirseEquipo"> */}
+                <p className="nombreUnirseEquipo">Nombre</p>
+                <div className="equipoUnirseEquipo">{data.nombreEquipo}</div>
+                {/* </div> */}
                 <button
                   onClick={() => enviarJugador(data)}
                   className="btnUnirseEquipo"
-                  key={index}
-                >
-                  Unirse a equipo
-                </button>
-              </div>
+                  key={index} >
+                 Unirse a equipo
+                </button>          
             </div>
           </>
         );
