@@ -50,18 +50,16 @@
   .btnCalendarioResponsiveMovil{
     display:none;
   }
-
-
 }
 
-  @media (max-width:640px){
+  @media(max-width:640px){
     .Menu{
       width: 100%;
       height: 86px; 
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      justify-content: space-between;
+      justify-content:center;
       align-items: stretch;
       align-content: stretch;
       position: relative;
@@ -81,52 +79,150 @@
         background-color: transparent;
         background-repeat: no-repeat;
         background-size: contain;
-        width: 100%;
+        width: 102%;
         height: 50px;
         cursor: pointer;
-        padding: 57px;
         padding-left: 55px;
         padding-bottom: 24px;
+        padding-right: 84px;
+        left: -6px;
+        position: relative;
+        background-position-x: 48px;
     }
     
       .btnPerfilResponsiveMovil{
-        background-image: url(./icononoticias.png);
+        background-image: url(./perfilicono.png);
         background-color: transparent;
         background-repeat: no-repeat;
         background-size: contain;
-        width: 100%;
+        width: 102%;
         height: 50px;
         cursor: pointer;
-        padding: 57px;
         padding-left: 55px;
         padding-bottom: 24px;
+        padding-right: 84px;
+        left: -6px;
+        position: relative;
+        background-position-x: 48px;  
       }
+
       .btnEquiposResponsiveMovil{
-        background-image: url(./icononoticias.png);
+        background-image: url(./equiposicono.png);
         background-color: transparent;
         background-repeat: no-repeat;
         background-size: contain;
-        width: 100%;
+        width: 102%;
         height: 50px;
         cursor: pointer;
-        padding: 57px;
         padding-left: 55px;
         padding-bottom: 24px;
+        padding-right: 84px;
+        left: -6px;
+        position: relative;
+        background-position-x: 48px;
       }
+
       .btnCalendarioResponsiveMovil{
         background-image: url(./trofeoicono.png);
         background-color: transparent;
         background-repeat: no-repeat;
         background-size: contain;
-        width: 100%;
+        width: 102%;
         height: 50px;
         cursor: pointer;
-        padding: 57px;
         padding-left: 55px;
         padding-bottom: 24px;
+        padding-right: 84px;
+        left: -6px;
+        position: relative;
+        background-position-x: 48px;
       }
 
-      .imgIzqResponsiveMovil{
-        
-      }
   }
+  /* @media (min-width:571px) and (max-width:640px){
+    .btnNoticiasResponsiveMovil{
+      background-image: url(./icononoticias.png);
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 102%;
+      height: 50px;
+      cursor: pointer;
+      padding-left: 55px;
+      padding-bottom: 24px;
+      padding-right: 93px;
+      left: -5px;
+      position: relative;
+      background-position-x: 48px;
+  }
+  }
+  @media(min-width:570px) and (max-width:625px){
+    .btnNoticiasResponsiveMovil{
+      background-image: url(./icononoticias.png);
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 102%;
+      height: 50px;
+      cursor: pointer;
+      padding-left: 55px;
+      padding-bottom: 24px;
+      padding-right: 76px;
+      left: -6px;
+      position: relative;
+      background-position-x: 52px;
+  }
+  }
+  @media(min-width:520px) and (max-width:569px){
+    .btnNoticiasResponsiveMovil{
+      background-image: url(./icononoticias.png);
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 102%;
+      height: 50px;
+      cursor: pointer;
+      padding-left: 55px;
+      padding-bottom: 24px;
+      padding-right: 76px;
+      left: -6px;
+      position: relative;
+      background-position-x: 52px;
+  }
+  }
+  @media(min-width:485px) and (max-width:519px){
+    .btnNoticiasResponsiveMovil{
+      background-image: url(./icononoticias.png);
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 102%;
+      height: 50px;
+      cursor: pointer;
+      padding-left: 55px;
+      padding-bottom: 24px;
+      padding-right: 55px;
+      left: -5px;
+      position: relative;
+      background-position-x: 39px;
+  }
+  }
+  @media(max-width:484px){
+    .btnNoticiasResponsiveMovil{
+      background-image: url(./icononoticias.png);
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 102%;
+      height: 50px;
+      cursor: pointer;
+      padding-left: 55px;
+      padding-bottom: 24px;
+      padding-right: 33px;
+      left: -5px;
+      position: relative;
+      background-position-x: 26px;
+  }
+  } */
+
+
