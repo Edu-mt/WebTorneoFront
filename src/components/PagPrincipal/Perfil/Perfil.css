@@ -1,7 +1,7 @@
 
-.cajaPerfil {
+.cajaPerfil{
   background-color: #292929c7;
-  height: 650px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -13,7 +13,6 @@
   border-color: #ff7b00;
   border-width: 7px;
   padding: 20px;
-  width: 500px;
 }
 .cajaFotoPerfil{
   background-color: #292929c7;
