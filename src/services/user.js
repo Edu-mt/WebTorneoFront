@@ -196,22 +196,22 @@ await axios.get("http://127.0.0.1:8081/traerTorneo")
         resultados: data.resultados[0],
         indice: data.indice,
        },
-     })
-    //  ;console.log("-----ENVIANDO AXIOS ADD GANADOR-------",data)
+     }); console.log("----- SEGUNDO ENVIANDO AXIOS ADD GANADOR AL SERVIDOR-------",data)
     
      .then(function (response, err) {
       console.log(err);     
       
       if (response.data.stateisFindEnviarGanador === true ) {
-        console.log("prueba del true addganador", response.data);
+        // console.log("prueba del true addganador", response.data);
         alert("Ya existe un ganador en esta partida");
       } 
     })
     .catch(function (err) {
       console.log(err);
     });
-
    };
+
+  
    
   const changeGanador=async (data) => {
     await axios({

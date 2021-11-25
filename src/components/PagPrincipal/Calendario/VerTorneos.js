@@ -19,40 +19,40 @@ function VerTorneos() {
         const torneoTraido = await traerTorneo();
         if(torneoTraido!=0){
         setMostrarTorneo(torneoTraido);
-        console.log("TORNEOTRAIDO", torneoTraido);
+        // console.log("TORNEOTRAIDO", torneoTraido);
 
         const jornadasTorneo = torneoTraido[0].jornadas;
-        console.log("esto es jornadasTorneo", jornadasTorneo);
+        // console.log("esto es jornadasTorneo", jornadasTorneo);
         let j = jornadasTorneo.length-1;
-        console.log("esto es longitudJornada", j);
+        // console.log("esto es longitudJornada", j);
         const ultimaJornada = torneoTraido[0].jornadas[j];
-        console.log("esto es ultimaJornada", ultimaJornada);
+        // console.log("esto es ultimaJornada", ultimaJornada);
         setJornadaReciente(ultimaJornada);
 
         }
       }, []);       
       
-      console.log("PUES AQUI ESTA", mostrarTorneo);
-      console.log("esta es la jornadaReciente", jornadaReciente);
+      // console.log("PUES AQUI ESTA", mostrarTorneo);
+      // console.log("esta es la jornadaReciente", jornadaReciente);
 
       const cambiarResultado = (event,index) => {
         const prueba = resultados;
         prueba.splice(0, 1, event.target.value); 
         // prueba.push(event.target.value)  
         setResultados(prueba);
-        console.log("PROBANDO LA PRUEBA",resultados);
+        // console.log("PROBANDO LA PRUEBA",resultados);
         setBotones(true);
-        console.log("index cambiarResultado",index);
+        // console.log("index cambiarResultado",index);
         setIndice(index);
       };
       
-      const enviarGanador = async() => {
+      const enviarGanador = async(event) => {
         const data = {
           resultados: resultados,
           indice: indice,
         };
-        const res = await addGanador(data);
-        console.log("----ENVIAR GANADOR---", data); 
+        const res =  addGanador(data);
+        console.log("---- PRIMERO ENVIAR GANADOR A USER---", data); 
         setBotones(false);        
       };
 
@@ -62,7 +62,7 @@ function VerTorneos() {
           indice: indice,
         };
         const res = await changeGanador(data);
-        console.log("----Cambiar GANADOR---", data); 
+        // console.log("----Cambiar GANADOR---", data); 
         setBotones(false);        
       };
      
