@@ -58,10 +58,14 @@ function Perfil () {
         <div className="fotoPerfil" style={{ backgroundImage: `url(${foto.foto})`}}></div>
         <button onClick={() => enviarFoto()} className="btnEnviarFoto" >Guardar avatar</button>
       </div>
-            <div className="perfil">equipo:{datosUsuario.nombreEquipo}</div>
-            <div className="perfil">nombre:{datosUsuario.nombre}</div>
-            <div className="perfil">{datosUsuario.email}</div>
-            <div className="fotoGrande" style={{ backgroundImage: `url(${datosUsuario.avatar})`}}> </div>
+          <div className="cajaPerfilYFoto">
+            <div className="cajaInfoPerfil">
+             <div className="perfil">equipo: {datosUsuario.nombreEquipo}</div>           
+             <div className="perfil">nombre: {datosUsuario.nombre}</div>           
+             <div className="perfil">Email: {datosUsuario.email}</div>
+            </div>
+             <div className="fotoGrande" style={{ backgroundImage: `url(${datosUsuario.avatar})`}}> </div>
+          </div>
       </div>
     );
 }

@@ -1,6 +1,33 @@
 
 .cajaPerfil{
-  
+  background-color: #292929c7;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-top: 70px;
+  border-style: ridge;
+  border-color: #ff7b00;
+  border-width: 7px;
+  padding: 20px;
+}
+.cajaFotoPerfil{
+  background-color: #292929c7;
+  height: 174px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-top: -5px;
+  border-style: ridge;
+  border-color: #ccc;
+  border-width: 7px;
+  padding: 20px;
 }
 .añadirAvatar{
  color: #ff7b00;
@@ -18,8 +45,27 @@
   border-color: rgb(255, 123, 0);
   background-color: rgba(87, 87, 87, 0.918);
 }
+.cajaInfoPerfil{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 20px;
+  margin-left: 15px;
+}
+.cajaPerfilYFoto{ 
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 20px;
+}
 .perfil{
-  
+  color: rgb(255, 123, 0);
+  font-size: 22px;
 }
 .btnPerfil{
   color:crimson ;
@@ -38,7 +84,7 @@
 
 .fotoGrande {
  
-  border: 1px solid #ccc;
+  border: 5px ridge #ccc;
   width: 300px;
   height: 300px;
   background-position: center;

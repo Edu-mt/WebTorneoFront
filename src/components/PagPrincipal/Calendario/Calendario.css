@@ -38,7 +38,7 @@
   align-items: flex-start;
   align-content: flex-start;
   margin-top: 70px;
-  border-style: inset;
+  border-style: ridge;
   border-color: #ff7b00;
   border-width: 7px;
   padding: 20px;
