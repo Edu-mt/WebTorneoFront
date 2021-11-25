@@ -30,7 +30,7 @@ export default function HeaderPagPrincipal() {
           <div className="fotoPerfilHeader" style={{ backgroundImage: `url(${datosUsuario.avatar})`}}></div>        
           <button className="btnCerrarSesion" onClick={cerrarSesion}>cerrar sesion</button>      
         </div>
-        <div className="imagenAbajo"></div>
+        
     </div>
        
     </>
