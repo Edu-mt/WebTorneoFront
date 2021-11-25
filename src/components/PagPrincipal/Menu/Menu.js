@@ -7,8 +7,6 @@ function Menu () {
       
       return (
         <>
-    
-         {/* <h1 className="Menu">MENU</h1> */}
         <div><Link to="/Noticias"><button className="btnMenu">NOTICIAS</button></Link></div>
         <div><Link to="/Equipos"><button className="btnMenu">EQUIPOS</button></Link></div>
         <div><Link to="/Perfil"><button className="btnMenu">PERFIL</button></Link></div>
@@ -16,10 +14,9 @@ function Menu () {
         <div><Link to="/Noticias"><button className="btnNoticiasResponsiveMovil"></button></Link></div>
         <div><Link to="/Equipos"><button className="btnNoticiasResponsiveMovil"></button></Link></div>
         <div><Link to="/Perfil"><button className="btnNoticiasResponsiveMovil"></button></Link></div>
-        <div><Link to="/Calendario"><button className="btnNoticiasResponsiveMovil"></button></Link></div>
+        <div><Link to="/Calendario"><button className="btnCalendarioResponsiveMovil"></button></Link></div>
        <div className="imgIzq"></div>
-       <div className="imgIzqResponsiveMovil"></div>
-     
+       <div className="imgIzqResponsiveMovil"></div>   
         </>
       );
 }
