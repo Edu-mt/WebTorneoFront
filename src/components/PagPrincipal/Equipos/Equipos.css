@@ -284,4 +284,39 @@
         border-color: rgb(255, 123, 0);
     
       }
+
+
+      .CajaUnirseEquipo {
+        background-color: #292929c7;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        margin-top: 0px;
+        border-style: ridge;
+        border-color: #ff7b00;
+        border-width: 7px;
+        width: 500px;
+        height: 600px;
+        padding: 20px;
+        overflow-y: scroll;
+    }
+    .equipoUnirseEquipo {
+      height: 25px;
+      border-style: ridge;
+      border-width: 1px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      padding: 3px;
+      width: 55%;
+      border-color: #ff7b00;
+  }
+  .btnUnirseEquipo {
+    color: #212121;
+    border-color: rgb(255, 123, 0);
+    background-color: rgba(87, 87, 87, 0.918);
+    height: 35px;
+    width: 30%;
+}
   }
