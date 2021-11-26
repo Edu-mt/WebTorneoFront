@@ -184,10 +184,12 @@
     color: #ffffff;
     background-color: rgb(75, 73, 72);
   }
+
+  /* @media (min-width:641) and ( max-width:5000px)  {
   .btnResponsiveCrearEquipo{
     display: none;
   }
-
+  } */
   @media (max-width:640px){
    
     .Equipos{

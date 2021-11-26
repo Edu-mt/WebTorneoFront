@@ -46,15 +46,23 @@ font-family: 'Archivo Black', sans-serif;
 }
 
 @media (max-width:640px){
+
+  .fondoHomePage{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 103%;
+  }
   .cuerpo{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-    border-width: 6px;
+    border-width: 9px;
     border-style: ridge;
     border-color: #7c7b7b;
-    width: 98%;
+    width: 93%;
   }
 }

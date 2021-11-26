@@ -91,6 +91,9 @@
     justify-content: space-around;
     align-items: center;
     align-content: center;
+    /* border-width: -1px; */
+    width: 95%;
+    border-width: 5px;
   }
 
   .cajaLogo{
@@ -104,11 +107,11 @@
     margin-top: 10px;
   }
   .ZonaUsuario{
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-  margin-right: -9px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-right: -9px;
   }
  .fotoPerfilHeader{
   margin-left: -1px;
