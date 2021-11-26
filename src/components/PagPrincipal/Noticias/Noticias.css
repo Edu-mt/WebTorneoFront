@@ -18,7 +18,22 @@
     height: 600px;
     padding: 20px;
     overflow-y: scroll;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: #7c7b7b;  
+}
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ED7A27;
+    outline: 1px solid slategrey;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
   }
 
   .cajitaTexto{
