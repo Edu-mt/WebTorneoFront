@@ -81,16 +81,16 @@
         background-color: #565555;
         background-repeat: no-repeat;
         background-size: contain;
-        width: 102%;
+        width: 92%;
         height: 50px;
         border-color: #ff7b00;
         cursor: pointer;
         padding-left: 55px;
         padding-bottom: 24px;
-        padding-right: 88px;
+        padding-right: 29px;
         left: -6px;
         position: relative;
-        background-position-x: 49px;
+        background-position-x: 26px;
     }
     .btnNoticiasResponsiveMovil:hover{
            background-color:#262626;
@@ -101,16 +101,16 @@
         background-color: #565555;
         background-repeat: no-repeat;
         background-size: contain;
-        width: 102%;
+        width: 92%;
         height: 50px;
         border-color: #ff7b00;
         cursor: pointer;
         padding-left: 55px;
         padding-bottom: 24px;
-        padding-right: 88px;
+        padding-right: 29px;
         left: -6px;
         position: relative;
-        background-position-x: 49px;
+        background-position-x: 20px;
       }
       .btnPerfilResponsiveMovil:hover{
         background-color:#262626;
@@ -121,16 +121,16 @@
         background-color: #565555;
         background-repeat: no-repeat;
         background-size: contain;
-        width: 102%;
+        width: 92%;
         height: 50px;
         border-color: #ff7b00;
         cursor: pointer;
         padding-left: 55px;
         padding-bottom: 24px;
-        padding-right:88px;
+        padding-right: 29px;
         left: -6px;
         position: relative;
-        background-position-x: 49px;
+        background-position-x: 17px;
       }
       .btnEquiposResponsiveMovil:hover{
       background-color:#262626;
@@ -141,16 +141,16 @@
         background-color: #565555;
         background-repeat: no-repeat;
         background-size: contain;
-        width: 102%;
+        width: 92%;
         height: 50px;
         border-color: #ff7b00;
         cursor: pointer;
         padding-left: 55px;
         padding-bottom: 24px;
-        padding-right: 88px;
+        padding-right: 29px;
         left: -6px;
         position: relative;
-        background-position-x: 49px;
+        background-position-x: 27px;
       }
       .btnCalendarioResponsiveMovil:hover{
       background-color:#262626;
