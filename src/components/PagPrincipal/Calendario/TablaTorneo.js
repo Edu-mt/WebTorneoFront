@@ -66,42 +66,68 @@ justify-content:center;
 `; 
 
 const CajaVaciaBordes8 = styled.div` 
-border-bottom: 2px solid #f6f6f6;
-border-top: 2px solid #f6f6f6;
+border-color:red;
+border-bottom: 2px solid #fdf4e8;
+border-top: 2px solid #fdf4e8;
 height: 143px;
 width: 39px;
-border-right: 2px solid #f6f6f6;
+border-right: 2px solid #fdf4e8;
 `; 
 const CajaVaciaBordes16 = styled.div` 
-border-bottom: 2px solid #f6f6f6;
-border-top: 2px solid #f6f6f6;
+border-color:red;
+border-bottom: 2px solid #fdf4e8;
+border-top: 2px solid #fdf4e8;
 height: 143px;
 width: 39px;
-border-right: 2px solid #f6f6f6;
+border-right: 2px solid ##fdf4e8;
 `; 
 const CajaVaciaBordes162 = styled.div`
-border-bottom: 2px solid #f6f6f6;
-border-top: 2px solid #f6f6f6;
+border-color:red;
+border-bottom: 2px solid #fdf4e8;
+border-top: 2px solid #fdf4e8;
 height: 250px;
 width: 39px;
-border-right: 2px solid #f6f6f6;
+border-right: 2px solid #fdf4e8;
 margin-bottom: 27px;
 margin-top: 28px;
 `; 
 const CajaVaciaBordes161 = styled.div`
-border-bottom: 2px solid #f6f6f6;
-border-top: 2px solid #f6f6f6;
+border-color:red;
+border-bottom: 2px solid #fdf4e8;
+border-top: 2px solid #fdf4e8;
 height: 490px;
 width: 39px;
-border-right: 2px solid #f6f6f6;
+border-right: 2px solid #fdf4e8;
 `; 
-const CajaVaciaBordes32 = styled.div` 
-border-bottom: 2px solid #f6f6f6;
-border-top: 2px solid #f6f6f6;
+const CajaVaciaBordes32 = styled.div`
+border-bottom: 2px solid #fdf4e8;
+border-top: 2px solid #fdf4e8;
 height: 143px;
 width: 39px;
-border-right: 2px solid #f6f6f6;
+border-right: 2px solid #fdf4e8;
 `; 
+const CajaVaciaBordes324 = styled.div`
+border-bottom: 2px solid #fdf4e8;
+border-top: 2px solid #fdf4e8;
+height: 265px;
+width: 39px;
+border-right: 2px solid #fdf4e8;
+`; 
+const CajaVaciaBordes322 = styled.div`
+border-bottom: 2px solid #fdf4e8;
+border-top: 2px solid #fdf4e8;
+height: 570px;
+width: 39px;
+border-right: 2px solid #fdf4e8;
+`; 
+const CajaVaciaBordes321 = styled.div`
+border-bottom: 2px solid #fdf4e8;
+border-top: 2px solid #fdf4e8;
+height: 950px;
+width: 39px;
+border-right: 2px solid #fdf4e8;
+`; 
+
 
 const CajaVaciaSinBordes8 = styled.div` 
 height:${props => props.posicion === 0 ? '0px' : '178px'}; 
@@ -115,11 +141,19 @@ const CajaVaciaSinBordes162 = styled.div`
 height:${props => props.posicion === 0 ? '0px' : '200px'}; 
 width:50px;
 `;
-
 const CajaVaciaSinBordes32 = styled.div` 
-height:${props => props.posicion === 0 ? '0px' : '178px'}; 
+height:${props => props.posicion === 0 ? '0px' : '180px'}; 
 width:50px; 
 `; 
+const CajaVaciaSinBordes324 = styled.div` 
+height:${props => props.posicion === 0 ? '0px' : '345px'}; 
+width:50px; 
+`; 
+const CajaVaciaSinBordes322 = styled.div` 
+height:${props => props.posicion === 0 ? '0px' : '515px'}; 
+width:50px; 
+`;
+
 
 const Linea = styled.div` 
 height:2px; 
@@ -267,8 +301,30 @@ function TablaTorneo() {
             return ( 
               index % 2 === 0 && 
               <> 
+                 {numPartidos === 16 && (
+                 <>
                 <CajaVaciaSinBordes32 posicion={index}></CajaVaciaSinBordes32> 
                 <CajaVaciaBordes32></CajaVaciaBordes32> 
+                </>
+               )}
+               {numPartidos === 8 && (
+                 <>
+                <CajaVaciaSinBordes324 posicion={index}></CajaVaciaSinBordes324> 
+                <CajaVaciaBordes324></CajaVaciaBordes324> 
+                </>
+               )}
+                {numPartidos === 4 && (
+                 <>
+                  <CajaVaciaSinBordes322 posicion={index}></CajaVaciaSinBordes322>
+                <CajaVaciaBordes322></CajaVaciaBordes322> 
+                </>
+                )}
+                    {numPartidos === 2 && (
+                 <>
+                <CajaVaciaBordes321></CajaVaciaBordes321> 
+                </>
+                )}
+
               </> 
             ) 
           } 
