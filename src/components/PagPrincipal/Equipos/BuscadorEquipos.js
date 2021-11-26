@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { traerEquipos, addJugador } from "../../../services/user";
+import { traerEquipos, addJugador, addNoticia } from "../../../services/user";
 import {  useDispatch, useSelector  } from "react-redux";
 import { selectDataUser } from "../../../features/userSlice";
 import "./Equipos.css";
@@ -45,7 +45,8 @@ function BuscadorEquipos() {
       usuario: nombreUsuario,
     };
     console.log("equipo seleccionado", equiposeleccionado);
-    const resBuscador = await addJugador(equiposeleccionado);
+    const resBuscador =  addJugador(equiposeleccionado);
+    const respuesta = addNoticia("El usuario: "+ nombreUsuario + " se ha unido al equipo: "+ data.nombreEquipo ); 
     console.log("este es el console log del res en Buscador", resBuscador);
   };
 

@@ -7,6 +7,7 @@ export default function Noticias() {
        
     useEffect(async () => {
         const res = await traerNoticias();
+        res.reverse();
         setInfoNoticias(res);        
       }, []);     
 

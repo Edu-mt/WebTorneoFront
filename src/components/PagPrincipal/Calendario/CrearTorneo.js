@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { traerEquipos, addTorneo , traerTorneo , deleteTorneo , addJornada } from "../../../services/user";
+import { traerEquipos, addTorneo , traerTorneo , deleteTorneo , addJornada, addNoticia } from "../../../services/user";
 import FinalizarJornada from "./CrearJornada";
 import "./Calendario.css";
 
@@ -52,8 +52,9 @@ function CrearTorneo() {
           nombreTorneo: nombreTorneo,
           arrayPartidas:arrayPartidas,
         };
-        const res = await addTorneo(data);
-        const respuesta = await addJornada(data.arrayPartidas);
+        const res =  addTorneo(data);
+        const respuesta =  addJornada(data.arrayPartidas);
+        const respuestaNoticias = addNoticia("Se ha creado el Torneo: "+ data.nombreTorneo); 
       };
 
       const eliminarTorneo = async(event) => {

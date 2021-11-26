@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {  useDispatch } from "react-redux";
-import {addEquipos, subirImagen} from "../../../services/user";
+import {addEquipos, addNoticia} from "../../../services/user";
 import PropTypes from 'prop-types';
 import "./Equipos.css";
 
@@ -45,6 +44,7 @@ function CrearEquipo() {
     };
     console.log("enviarDatosEquipos", data); 
   const res =await addEquipos(data);
+  const respuesta = addNoticia("Se ha creado un nuevo equipo: "+ data.nombreEquipo); 
  
 
   reset();
