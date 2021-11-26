@@ -262,15 +262,33 @@ await axios.get("http://127.0.0.1:8081/traerTorneo")
      });console.log("-----ENVIANDO AXIOS  GANADORES JORNADA -------", data)    
    };
 
-  //  const deleteGanadores=async (data) => {
-  //   await axios({
-  //      method: "post",
-  //      url: "http://127.0.0.1:8081/EliminarGanadores",
-  //      data: {
-  //        nombreTorneo: data.nombreTorneo,
-  //      },       
-  //    });console.log("console deleteGanadores en el post",data)  
-  //  };
+   const addNoticia =async (data) => {
+     console.log("PASA NOTICIA AXIOS", data)
+    await axios({
+       method: "post",
+       url: "http://127.0.0.1:8081/crearNoticias",
+       data: {
+        texto : data
+       },
+       
+     })
+   };
+   const traerNoticias =async () => {
+    let respuestaServidorNoticias;
+   await axios({
+      method: "post",
+      url: "http://127.0.0.1:8081/traerNoticias",    
+    })
+      .then(function (response, err) {
+        console.log(err);
+        respuestaServidorNoticias = response.data;   
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  
+      return respuestaServidorNoticias;
+  };
 
 export { addUser, getUser, addEquipos,traerEquipos,addJugador , subirImagen, addTorneo, traerTorneo, 
-  addGanador , changeGanador, addFoto , deleteTorneo, addJornada };
+  addGanador , changeGanador, addFoto , deleteTorneo, addJornada, addNoticia, traerNoticias };

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import {  useDispatch } from "react-redux";
-import {addUser} from "../../services/user";
+import {addUser, addNoticia} from "../../services/user";
 import { addDataUser } from "../../features/userSlice";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import "../../App.css"
@@ -31,7 +31,8 @@ function AltaUsuario(props) {
   const res =await addUser(data);
   console.log("este es el console log del res en altaUsuario",res);
   if(res.stateFind === false){
-    dispatch(addDataUser(res.data)); 
+    dispatch(addDataUser(res.data));
+    const respuesta =await addNoticia("El usuario "+ data.nombre + " se ha registrado en la pagina"); 
   }
   
   reset();
