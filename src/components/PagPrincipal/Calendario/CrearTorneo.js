@@ -52,7 +52,7 @@ function CrearTorneo() {
           nombreTorneo: nombreTorneo,
           arrayPartidas:arrayPartidas,
         };
-        const res =  addTorneo(data);
+        const res = await addTorneo(data);
         const respuesta =  addJornada(data.arrayPartidas);
         const respuestaNoticias = addNoticia("Se ha creado el Torneo: "+ data.nombreTorneo); 
       };

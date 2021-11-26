@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { traerNoticias } from "../../../services/user";
 import "./Noticias.css";
 
+
 export default function Noticias() {
     const [infoNoticias, setInfoNoticias] = useState([]);
        
@@ -13,23 +14,23 @@ export default function Noticias() {
 
            
     return (
-        <div>
-            Noticias
-            <div>      
+        <div className="CajaNoticias">
+           
+            
                
             {
       infoNoticias.map((data, index) => {
         return (
           <>
-            <div className="">             
-             <div className="">{data.texto}</div>
+            <div>             
+             <div  className="cajitaTexto">{data.texto}</div><br/>
                          
             </div>
           </>
         );
       })
     }
-            </div>      
+                
         </div>
     )
 }
