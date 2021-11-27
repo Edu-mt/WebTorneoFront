@@ -2,14 +2,20 @@ import React from 'react';
 import "./header.css";
 import {  useSelector, useDispatch  } from "react-redux";
 import { selectDataUser } from "../../../features/userSlice";
-import { loggin, selectLogged } from "../../../features/userSlice";
+import { loggin } from "../../../features/userSlice";
+
 
 
 export default function HeaderPagPrincipal() {
   const dispatch = useDispatch();
   const datosUsuario = useSelector(selectDataUser);
   const cerrarSesion = ()=>{
-    dispatch(loggin(false));
+    if(loggin(true)){
+      document.cookie = "nombre=; max-age=0; path=/";
+      document.cookie = "password=; max-age=0; path=/";  
+      dispatch(loggin(false));
+      window.location.reload();
+    }
   }
     
     return (
