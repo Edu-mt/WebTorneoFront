@@ -10,7 +10,7 @@ font-family: 'Archivo Black', sans-serif;
   background: url(./img/mapamundo.jpg);
   position:relative;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   height: 100%;
   width: 100%;
 }
@@ -36,13 +36,13 @@ font-family: 'Archivo Black', sans-serif;
   align-content: stretch;
 }
 
-.cuerpo{
+.cuerpo {
   display: flex;
   justify-content: space-between;
   border-width: 6px;
   border-style: ridge;
   border-color: #7c7b7b;
-  height: 100%;
+  height: 883px;
 }
 
 @media (max-width:640px){
@@ -64,5 +64,6 @@ font-family: 'Archivo Black', sans-serif;
     border-style: ridge;
     border-color: #7c7b7b;
     width: 93%;
+    height: auto;
   }
 }

@@ -69,7 +69,7 @@ function BuscadorEquipos() {
           <>
             <div className="cajaNombreYBtnUnirseEquipo">             
               {/* <div className="cajaNombreUnirseEquipo"> */}
-                <p className="nombreUnirseEquipo">Nombre</p>
+               
                 <div className="equipoUnirseEquipo">{data.nombreEquipo}</div>
                 {/* </div> */}
                 <button

@@ -152,17 +152,7 @@
     flex-wrap: nowrap;
     justify-content: stretch;
 }
-.nombreUnirseEquipo{
-  border-style: ridge;
-  border-width: 1px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  padding: 3px;
-  height: 25px;
-  width: 15%;
-  color: #9f9f9f;
-  border-color: #ff7b00;
-}
+
 .equipoUnirseEquipo{
   height: 25px;
     border-style: ridge;
@@ -170,7 +160,7 @@
     margin-bottom: 0px;
     margin-top: 0px;
     padding: 3px;
-    width: 65%;
+    width: 80%;
     border-color: #ff7b00;
 }
   .btnUnirseEquipo{
@@ -327,13 +317,11 @@
         border-style: ridge;
         border-color: #ff7b00;
         border-width: 7px;
-        width: 84%;
+        width: 280px;
         height: 600px;
         padding: 20px;
         overflow-y: scroll;
-    }
-    .nombreUnirseEquipO{
-      display: none;
+        margin-left: 0px;
     }
     .equipoUnirseEquipo {
       height: 25px;
@@ -342,7 +330,7 @@
       margin-bottom: 0px;
       margin-top: 0px;
       padding: 3px;
-      width: 55%;
+      width: 67%;
       border-color: #ff7b00;
   }
   .btnUnirseEquipo {
