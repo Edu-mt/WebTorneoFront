@@ -230,7 +230,7 @@
       }
 
 
-      .CajaCrearEquipo{
+      .CajaCrearEquipo {
         background-color: #292929c7;
         display: flex;
         flex-direction: column;
@@ -242,21 +242,47 @@
         border-style: inset;
         border-color: #ff7b00;
         border-width: 7px;
-        height: 750px;
-        width: 500px;
+        height: 700px;
+        width: 280px;
         padding: 20px;
-    
-      }
-      .cajaAñadirLogoEquipo{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: center;
-        margin-right: 126px;
-      }
-      .crearColum{
+    }
+    .NombreEquipo {
+      width: 100%;
+      height: 40px;
+      color: gray;
+      border-color: rgb(255, 123, 0);
+      cursor: pointer;
+  }
+    .cajaAñadirLogoEquipo {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: center;
+      margin-right: -58px;
+  }
+  .añadirLogo {
+    width: 227px;
+    height: 99px;
+    margin-right: 104px;
+    margin-top: -50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imputLogoEquipo {
+  font-size: 11px;
+}
+.logoEquipo {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 250px;
+  height: 250px;
+  border-style: ridge;
+  border-color: #ff7b00;
+  margin-left: 8px;
+}
+      .crearColum {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -269,18 +295,20 @@
         border-bottom: none;
         padding-right: 16px;
         margin-top: 10px;
-      }
+        width: 90%;
+    }
       .btnCrearEquipo{
         display: none;
       }
-      .btnResponsiveCrearEquipo{
+      .btnResponsiveCrearEquipo {
         color: white;
         width: 18em;
         height: 55px;
         background-color: rgba(87, 87, 87, 0.918);
         border-color: rgb(255, 123, 0);
         cursor: pointer;
-      }
+        margin-top: 10px;
+    }
       .btnResponsiveCrearEquipo:hover{
         background-color: rgb(75, 73, 72);
         border-color: rgb(255, 123, 0);
@@ -299,10 +327,13 @@
         border-style: ridge;
         border-color: #ff7b00;
         border-width: 7px;
-        width: 500px;
+        width: 84%;
         height: 600px;
         padding: 20px;
         overflow-y: scroll;
+    }
+    .nombreUnirseEquipO{
+      display: none;
     }
     .equipoUnirseEquipo {
       height: 25px;

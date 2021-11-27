@@ -58,3 +58,32 @@ CajaNoticias::-webkit-scrollbar-thumb {
 CajaNoticias::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
 }
+
+@media (max-width:640px){
+  .CajaNoticias{
+    background-color: #292929c7;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 0px;
+    border-style: inset;
+    border-color: #ff7b00;
+    border-width: 7px;
+    width: 250px;
+    height: 600px;
+    padding: 20px;
+    overflow-y: scroll;
+    
+  }
+  .btnEquipos {
+    color: white;
+    width: 18em;
+    height: 55px;
+    background-color: rgba(87, 87, 87, 0.918);
+    border-color: rgb(255, 123, 0);
+    cursor: pointer;
+    margin-right: 0px;
+    margin-left: opx;
+    margin-left: 0px;
+}
+}

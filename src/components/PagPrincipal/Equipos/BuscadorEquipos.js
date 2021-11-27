@@ -76,7 +76,7 @@ function BuscadorEquipos() {
                   onClick={() => enviarJugador(data)}
                   className="btnUnirseEquipo"
                   key={index} >
-                 Unirse a equipo
+                 UNIRSE
                 </button>          
             </div>
           </>
