@@ -108,6 +108,7 @@
     border-width: 7px;
     padding: 8px;
     width: 308px;
+    padding-bottom: inherit;
 }
   .cajaInfoPerfil{
     display: flex;
@@ -146,18 +147,20 @@
 }
 .imputAvatar {
   color: rgb(255, 123, 0);
-  width: 10em;
-  height: 35px;
-  border-color: rgb(255, 123, 0);
+    width: 10em;
+    height: 26px;
+    border-color: rgb(255, 123, 0);
 }
 .fotoPerfil {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-style: ridge;
   border-color: beige;
-  height: 50px;
+  border-width: 1px;
+  height: 60px;
   margin-left: 15px;
-  width: 50px;
+  width: 59px;
   margin-bottom: 5px;
 }
   .cajaPerfilYFoto{ 
@@ -169,8 +172,11 @@
     height: 100%;
     margin-left: -20px;
   }
-  .perfil {
+  .datoFijoPerfil{
     color: rgb(255 123 0);
+  }
+  .perfil {
+    color: rgb(255, 255, 255);
     font-size: inherit;
 }
   .fotoGrande{

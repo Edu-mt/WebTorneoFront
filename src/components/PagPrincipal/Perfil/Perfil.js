@@ -60,9 +60,15 @@ function Perfil () {
       </div>
           <div className="cajaPerfilYFoto">
             <div className="cajaInfoPerfil">
-             <div className="perfil">equipo: {datosUsuario.nombreEquipo}</div>           
-             <div className="perfil">nombre: {datosUsuario.nombre}</div>           
-             <div className="perfil">Email: {datosUsuario.email}</div>
+             <div className="perfil">
+               <p className="datoFijoPerfil">equipo:</p>
+               {datosUsuario.nombreEquipo}</div>           
+             <div className="perfil">
+               <p className="datoFijoPerfil">nombre:</p>
+               {datosUsuario.nombre}</div>           
+             <div className="perfil">
+               <p className="datoFijoPerfil">Email:</p>
+               {datosUsuario.email}</div>
             </div>
              <div className="fotoGrande" style={{ backgroundImage: `url(${datosUsuario.avatar})`}}> </div>
           </div>
