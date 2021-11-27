@@ -93,7 +93,7 @@
 }
 
 @media (max-width:640px){
-  .cajaPerfil{
+  .cajaPerfil {
     background-color: #292929c7;
     height: 750px;
     display: flex;
@@ -106,9 +106,9 @@
     border-style: ridge;
     border-color: #ff7b00;
     border-width: 7px;
-    padding: 20px;
-    width: 500px;
-  }
+    padding: 8px;
+    width: 308px;
+}
   .cajaInfoPerfil{
     display: flex;
     flex-direction: column;
@@ -122,7 +122,7 @@
     border-color: #ccc;
     border-width: 7px;
   }
-  .cajaFotoPerfil{
+  .cajaFotoPerfil {
     background-color: #292929c7;
     height: 174px;
     display: flex;
@@ -131,13 +131,35 @@
     justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
-    margin-top: -5px;
+    margin-top: 0px;
     border-style: ridge;
     border-color: #ccc;
     border-width: 7px;
-    padding: 20px;
+    padding: 8px;
     width: 90%;
-  }
+}
+.añadirAvatar {
+  color: #ff7b00;
+  font-size: 19px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.imputAvatar {
+  color: rgb(255, 123, 0);
+  width: 10em;
+  height: 35px;
+  border-color: rgb(255, 123, 0);
+}
+.fotoPerfil {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: beige;
+  height: 50px;
+  margin-left: 15px;
+  width: 50px;
+  margin-bottom: 5px;
+}
   .cajaPerfilYFoto{ 
     display: flex;
     flex-direction: column-reverse;
@@ -147,10 +169,10 @@
     height: 100%;
     margin-left: -20px;
   }
-  .perfil{
+  .perfil {
     color: rgb(255 123 0);
-    font-size: x-large;
-  }
+    font-size: inherit;
+}
   .fotoGrande{
     border: 5px ridge #ccc;
     width: 300px;
@@ -159,10 +181,10 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .btnEnviarFoto{
+  .btnEnviarFoto {
     color: #212121;
     border-color: rgb(255, 123, 0);
     background-color: rgba(87, 87, 87, 0.918);
-    height: inherit;
-  }
+    height: 40px;
+}
 }
