@@ -1,29 +1,13 @@
-.torneo{
-
-}
-
-.ronda{
+/* .wrapper {
   display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: stretch;
-  margin-top: 20px;
-}
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: inherit;
+  align-content: stretch;
+} */
 
-.enfrentamiento{
-    background-color: #3e3d3d8a;
-    width: 120px;
-    border-style: ridge;
-    border-color: #ff7b00;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: stretch;
-}
+
 .equipo1{
     color: #ff9800;
   padding: 10px;
@@ -36,37 +20,7 @@
     color: #b0b0b0;
 }
 
-.padreBorder{
-  height: 70px;
-  width: 100px;
-  border-style: solid;
-  border-left: none;
-}
-.hijoBorder1{
 
-}
-.hijoBorder2{
-
-}
-
-.padreBorder2{
-  background-color: black;
-  width: 100px;
-  height: 2px;
-
-}
-.padreBorder3{
-  background-color: black;
-  width: 100px;
-  height: 2px;
-
-}
-
-.conectorVerticalArriba{
-  background-color: black;
-  width: 3px;
-  height: 100px;
-}
 
 .ronda{
   display: flex;
@@ -117,7 +71,6 @@
 
 }
 
-
 .equipo1{
   color: #ff9800;
 padding: 10px;
@@ -130,8 +83,6 @@ padding: 10px;
   color: #ff9800;
 padding: 10px;
 }
-
-
 
 .VS{
 
@@ -228,4 +179,7 @@ padding: 10px;
   color: #f6f6f6;
   padding: 10px;
   FONT-SIZE: 20px;
+}
+@media(max-width:640px){
+
 }

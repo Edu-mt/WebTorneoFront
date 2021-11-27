@@ -66,23 +66,23 @@ justify-content:center;
 `; 
 
 const CajaVaciaBordes8 = styled.div` 
-border-color:red;
-border-bottom: 2px solid #fdf4e8;
-border-top: 2px solid #fdf4e8;
-height: 143px;
-width: 39px;
-border-right: 2px solid #fdf4e8;
+border-style: solid;
+    border-left: none;
+    border-color: #fdf4e8;
+    border-width: 2px;
+    height: 143px;
+    width: 39px;
 `; 
 const CajaVaciaBordes16 = styled.div` 
-border-color:red;
-border-bottom: 2px solid #fdf4e8;
-border-top: 2px solid #fdf4e8;
-height: 143px;
-width: 39px;
-border-right: 2px solid ##fdf4e8;
+border-style: solid;
+    border-left: none;
+    border-color: #fdf4e8;
+    border-width: 2px;
+    height: 143px;
+    width: 39px;
+
 `; 
 const CajaVaciaBordes162 = styled.div`
-border-color:red;
 border-bottom: 2px solid #fdf4e8;
 border-top: 2px solid #fdf4e8;
 height: 250px;
@@ -92,7 +92,6 @@ margin-bottom: 27px;
 margin-top: 28px;
 `; 
 const CajaVaciaBordes161 = styled.div`
-border-color:red;
 border-bottom: 2px solid #fdf4e8;
 border-top: 2px solid #fdf4e8;
 height: 490px;
@@ -100,11 +99,12 @@ width: 39px;
 border-right: 2px solid #fdf4e8;
 `; 
 const CajaVaciaBordes32 = styled.div`
-border-bottom: 2px solid #fdf4e8;
-border-top: 2px solid #fdf4e8;
-height: 143px;
-width: 39px;
-border-right: 2px solid #fdf4e8;
+border-style: solid;
+    border-left: none;
+    border-color: #fdf4e8;
+    border-width: 2px;
+    height: 143px;
+    width: 39px;
 `; 
 const CajaVaciaBordes324 = styled.div`
 border-bottom: 2px solid #fdf4e8;

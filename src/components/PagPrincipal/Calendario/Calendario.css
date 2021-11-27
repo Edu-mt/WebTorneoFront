@@ -71,3 +71,22 @@
   border-style: ridge;
   padding: 5px;
 }
+@media(max-width:640px){
+  .cajaCalendario {
+    background-color: #292929c7;
+    height: 600px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-top: 0px;
+    border-style: ridge;
+    border-color: #ff7b00;
+    border-width: 7px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+}
