@@ -107,7 +107,10 @@
         padding-bottom: 24px;
         padding-right: 29px;
         position: relative;
-        background-position-x: 20px;
+        background-position-y: 5px;
+        background-size: 36px;
+        background-position-x: 23px;
+    
       }
       .btnPerfilResponsiveMovil:hover{
         background-color:#262626;
@@ -115,6 +118,7 @@
 
       .btnEquiposResponsiveMovil{
         background-image: url(./equiposicono.png);
+        background-color: #565555;
         background-color: #565555;
         background-repeat: no-repeat;
         background-size: contain;
@@ -126,7 +130,9 @@
         padding-bottom: 24px;
         padding-right: 29px;
         position: relative;
-        background-position-x: 17px;
+        background-position-y: 5px;
+        background-position-x: 21px;
+        background-size: 42px;
       }
       .btnEquiposResponsiveMovil:hover{
       background-color:#262626;
