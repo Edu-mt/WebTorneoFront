@@ -11,7 +11,7 @@ function CrearTorneo() {
     const [estadoBotonGenerar, setestadoBotonGenerar] = useState(true);
     const [vista, setVista] = useState(true);
     const [torneoTraido, setTorneoTraido] = useState([]);
-
+  
     console.log("esto es torneotraido", torneoTraido);    
 
     useEffect( async() => { 
@@ -37,16 +37,22 @@ function CrearTorneo() {
       }, []);      
     
       function parejasEquipos() {
-        const equiposFinal = new Array(); 
-        setEstadoBotonGuardar(true);
-        setestadoBotonGenerar(false);
-      var a;
-        for (a=0 ; a < arrayEquipos.length/2; a++) {
-          var b = 2*a;
-          var objeto = [arrayEquipos[b].nombreEquipo , arrayEquipos[b+1].nombreEquipo]
-          equiposFinal.push(objeto);      
+        
+        if(arrayEquipos.length === 8 || arrayEquipos.length === 16 || arrayEquipos.length === 32 ){
+          const equiposFinal = new Array(); 
+          setEstadoBotonGuardar(true);
+          setestadoBotonGenerar(false);
+        var a;
+          for (a=0 ; a < arrayEquipos.length/2; a++) {
+            var b = 2*a;
+            var objeto = [arrayEquipos[b].nombreEquipo , arrayEquipos[b+1].nombreEquipo]
+            equiposFinal.push(objeto);      
+          }
+          setArrayPartidas(equiposFinal);
+        }else{
+          alert("a tomar por culo")
         }
-        setArrayPartidas(equiposFinal);
+   
       }        
 
       const enviarDatosTorneo = async(event) => {
