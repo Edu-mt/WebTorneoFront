@@ -55,7 +55,7 @@
 
   @media(max-width:640px){
     .Menu{
-      width: 110%;
+      width: 107%;
       height: 58px;
       display: flex;
       flex-direction: row;
@@ -87,7 +87,7 @@
         cursor: pointer;
         padding-left: 53px;
         padding-bottom: 24px;
-        padding-right: 32px;
+        padding-right: 34px;
         position: relative;
         background-position-x: 26px;
     }
@@ -106,7 +106,7 @@
         cursor: pointer;
         padding-left: 53px;
         padding-bottom: 24px;
-        padding-right: 32px;
+        padding-right: 33px;
         position: relative;
         background-position-y: 5px;
         background-size: 36px;
@@ -129,7 +129,7 @@
         cursor: pointer;
         padding-left: 53px;
         padding-bottom: 24px;
-        padding-right: 32px;
+        padding-right: 33px;
         position: relative;
         background-position-y: 5px;
         background-position-x: 21px;
@@ -150,7 +150,7 @@
         cursor: pointer;
         padding-left: 53px;
         padding-bottom: 24px;
-        padding-right: 32px;
+        padding-right: 34px;
         position: relative;
         background-position-x: 27px;
       }
