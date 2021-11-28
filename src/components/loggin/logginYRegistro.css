@@ -80,9 +80,10 @@
     .cajaLogin {
 
       position: relative;
-      left: 107px;
+      left: 63px;
       border-color: rgb(209 105 53);
       background-color: #9e9e9e1f;
+      bottom: -88px;
     }
 
     .tituloLoggin{
