@@ -75,7 +75,9 @@ function VerTorneos() {
         console.log("PERDEDOR" , perdedor);
         const texto = ["el equipo " + resultados + " ha ganado contra " + perdedor + " en la jornada " + posicionJornada];
         console.log(texto);
-        const respuesta =  addNoticia(texto);     
+        const respuesta =  addNoticia(texto); 
+        window.location.href = "http://localhost:3000/Noticias";
+    
       };
 
       const modificarGanador = async() => {
@@ -85,54 +87,54 @@ function VerTorneos() {
         };
         const res = await changeGanador(data);
         // console.log("----Cambiar GANADOR---", data); 
-        setBotones(false);        
+        setBotones(false);     
+        window.location.href = "http://localhost:3000/Noticias";
+   
       };
 
       
      
     
     return (
-      
+      <>
         <div>
           <TablaTorneo/>
-        <div>
-          {/* <div>{mostrarTorneo.nombreTorneo}</div> */}
-          <div>
-            {jornadaReciente.map((equipos, index) => {
-              return (
-                <>
-                  <div>
-                     <div className="tablaEquipos">
-                      <div className="equip">{equipos[0]}</div>
-                      <div className="vs">{" "}{" "+"VS"+" "}{" "}</div>
-                      <div className="equip">{equipos[1]}{" "}</div><br/>
-                     </div>
-                     
-                    {datosUsuario.admin? (<select className="selectGnanador" value={resultados[index]} onChange={(event)=>cambiarResultado(event,index)}>
-                    {/* <option selected >{ganador?gandor:"seleccionar ganador"}</option> 
-                    Esto es lo que dijo el profesor para que se quedase el valor si ya 
-                    habian metido un resultado en la base de datos cuando cambiemos el estado de ganador*/}
-                    <option selected >Seleccionar ganador</option>
-                        <option value={equipos[0]}>{equipos[0]}</option>
-                        <option value={equipos[1]}>{equipos[1]}</option>  
-                    </select>)  
-                    :
-                   <div></div>
-                    }
-                    
-                  </div>
-                  <br/>
-                </>
-              );
-            })}
-          </div>
-        </div>
-      
-       {botones === true && (<button className="btnGnanador" onClick={enviarGanador}>Enviar Ganador</button>)}
-       {botones === true && (<button className="btnGnanador" onClick={modificarGanador}>Modificar Ganador</button>)}
-        </div>
-      
-        
+          {datosUsuario.admin?(
+            <div>
+              <div>
+                {jornadaReciente.map((equipos, index) => {
+                  return (
+                    <>
+                      <div>
+                        <div className="tablaEquipos">
+                          <div className="equip">{equipos[0]}</div>
+                          <div className="vs">{" "}{" "+"VS"+" "}{" "}</div>
+                          <div className="equip">{equipos[1]}{" "}</div><br/>
+                        </div>
+                        
+                        <select className="selectGnanador" value={resultados[index]} onChange={(event)=>cambiarResultado(event,index)}>
+                        {/* <option selected >{ganador?gandor:"seleccionar ganador"}</option> 
+                        Esto es lo que dijo el profesor para que se quedase el valor si ya 
+                        habian metido un resultado en la base de datos cuando cambiemos el estado de ganador*/}
+                        <option selected >Seleccionar ganador</option>
+                            <option value={equipos[0]}>{equipos[0]}</option>
+                            <option value={equipos[1]}>{equipos[1]}</option>  
+                        </select>                    
+                      </div>
+                      <br/>
+                    </>
+                  );
+                })}
+              </div>
+            </div>
+          )
+          :
+          <div></div>
+          }      
+          {botones === true && (<button className="btnGnanador" onClick={enviarGanador}>Enviar Ganador</button>)}
+          {botones === true && (<button className="btnGnanador" onClick={modificarGanador}>Modificar Ganador</button>)}
+        </div>      
+       </> 
     )
     
 }
