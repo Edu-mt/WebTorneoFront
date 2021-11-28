@@ -39,9 +39,6 @@ font-family: 'Archivo Black', sans-serif;
 .cuerpo {
   display: flex;
   justify-content: space-between;
-  border-width: 6px;
-  border-style: ridge;
-  border-color: #7c7b7b;
   height: 1013px;
 }
 
