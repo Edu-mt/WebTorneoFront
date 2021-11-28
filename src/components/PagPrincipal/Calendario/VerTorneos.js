@@ -113,9 +113,6 @@ function VerTorneos() {
                         </div>
                         
                         <select className="selectGnanador" value={resultados[index]} onChange={(event)=>cambiarResultado(event,index)}>
-                        {/* <option selected >{ganador?gandor:"seleccionar ganador"}</option> 
-                        Esto es lo que dijo el profesor para que se quedase el valor si ya 
-                        habian metido un resultado en la base de datos cuando cambiemos el estado de ganador*/}
                         <option selected >Seleccionar ganador</option>
                             <option value={equipos[0]}>{equipos[0]}</option>
                             <option value={equipos[1]}>{equipos[1]}</option>  

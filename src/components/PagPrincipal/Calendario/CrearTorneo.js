@@ -7,7 +7,8 @@ function CrearTorneo() {
     const [arrayEquipos, setArrayEquipos] = useState([]);
     const [arrayPartidas, setArrayPartidas] = useState([]);
     const [nombreTorneo, setNombreTorneo] = useState(""); 
-    const [estadoBoton, setEstadoBoton] = useState(true);
+    const [estadoBotonGuardar, setEstadoBotonGuardar] = useState(false);
+    const [estadoBotonGenerar, setestadoBotonGenerar] = useState(true);
     const [vista, setVista] = useState(true);
     const [torneoTraido, setTorneoTraido] = useState([]);
 
@@ -37,7 +38,8 @@ function CrearTorneo() {
     
       function parejasEquipos() {
         const equiposFinal = new Array(); 
-        setEstadoBoton(true);
+        setEstadoBotonGuardar(true);
+        setestadoBotonGenerar(false);
       var a;
         for (a=0 ; a < arrayEquipos.length/2; a++) {
           var b = 2*a;
@@ -55,6 +57,7 @@ function CrearTorneo() {
         const res = await addTorneo(data);
         const respuesta =  addJornada(data.arrayPartidas);
         const respuestaNoticias = addNoticia("Se ha creado el Torneo: "+ data.nombreTorneo); 
+       
       };
 
       const eliminarTorneo = async(event) => {
@@ -98,8 +101,8 @@ function CrearTorneo() {
                 );
             })
             }
-            <button className="btnGenerarTorneo" onClick={parejasEquipos}>Generar Torneo</button>          
-            {estadoBoton === true && (<button onClick={enviarDatosTorneo}>Guardar datos torneo</button>)}                
+            {estadoBotonGenerar === true && (<button className="btnGenerarTorneo" onClick={parejasEquipos}>Generar Torneo</button> )}         
+            {estadoBotonGuardar === true && (<button className="btnGenerarTorneo" onClick={enviarDatosTorneo}>Guardar datos torneo</button>)}                
           </div>  
           )
           : 

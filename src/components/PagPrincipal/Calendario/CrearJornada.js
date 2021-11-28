@@ -43,6 +43,7 @@ function FinalizarJornada() {
                     }
                     // setArrayGanadoresJornada(equiposFinal);      
                     const res = await addJornada(equiposFinal); 
+                    
 
                     console.log("--- ARRAY GANADORES despues----", equiposFinal); 
                 }
@@ -51,6 +52,7 @@ function FinalizarJornada() {
                     var objeto = [ganadoresTorneo[0].resultados]
                     equiposFinal.push(objeto);                        
                     const res = await addJornada(equiposFinal); 
+                    
                     console.log("--- ARRAY GANADORES despues----", equiposFinal); 
                 }
                 
