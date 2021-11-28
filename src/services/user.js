@@ -236,11 +236,19 @@ await axios.get("http://127.0.0.1:8081/traerTorneo")
          nombreUsuario: data.usuario,
          foto: ""         
        }       
-     })    
+     })     
+     .then(function (response, err) {
+      console.log(err);     
+      
+      if (response.data.stateFindChangePhoto === true ) {
+        window.location.reload();
+      } 
+    })
        .catch(function (err) {
          console.log(err);
        });console.log("AXIOS FOTAVATAR",data.avatar);      
    };
+
 
    const deleteTorneo=async (data) => {
     await axios({
