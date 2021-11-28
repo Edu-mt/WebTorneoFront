@@ -49,7 +49,7 @@ font-family: 'Archivo Black', sans-serif;
     background-size: cover;
     position: relative;
     height: 100%;
-    width: 103%;
+    width: 100%;
   }
   .cuerpo{
     flex-direction: column;
@@ -57,9 +57,6 @@ font-family: 'Archivo Black', sans-serif;
     justify-content: center;
     align-items: center;
     align-content: center;
-    border-width: 9px;
-    border-style: ridge;
-    border-color: #7c7b7b;
     width: 93%;
     height: auto;
   }

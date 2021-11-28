@@ -108,7 +108,9 @@
     border-width: 7px;
     padding: 8px;
     width: 308px;
-    padding-bottom: inherit;
+    padding-bottom: inherit;  
+    margin-left: 25px;
+
 }
   .cajaInfoPerfil{
     display: flex;

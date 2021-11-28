@@ -69,10 +69,11 @@ CajaNoticias::-webkit-scrollbar-track {
     border-style: inset;
     border-color: #ff7b00;
     border-width: 7px;
-    width: 250px;
+    width: 277px;
     height: 600px;
     padding: 20px;
     overflow-y: scroll;
+    margin-left: 25px;
     
   }
   .btnEquipos {

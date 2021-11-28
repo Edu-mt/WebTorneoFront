@@ -199,6 +199,7 @@
         justify-content: space-evenly;
         align-items: flex-end;
         margin-top: 0px;
+        margin-left: 25px;
       }
       .creaUne{
         display: flex;
@@ -233,8 +234,9 @@
         border-color: #ff7b00;
         border-width: 7px;
         height: 700px;
-        width: 280px;
+        width: 290px;
         padding: 20px;
+        margin-left: 25px;
     }
     .NombreEquipo {
       width: 100%;
@@ -317,11 +319,11 @@
         border-style: ridge;
         border-color: #ff7b00;
         border-width: 7px;
-        width: 280px;
+        width: 290px;
         height: 600px;
         padding: 20px;
         overflow-y: scroll;
-        margin-left: 0px;
+        margin-left: 25px;
     }
     .equipoUnirseEquipo {
       height: 25px;
