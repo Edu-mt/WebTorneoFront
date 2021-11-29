@@ -50,7 +50,7 @@ function CrearTorneo() {
           }
           setArrayPartidas(equiposFinal);
         }else{
-          alert("a tomar por culo")
+          alert("hay que meter 8 o 16 o 32 equipos")
         }
    
       }        
