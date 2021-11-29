@@ -14,6 +14,11 @@ export default function Noticias() {
 
            
     return (
+      <>
+      <div className="noticias">
+      <div>
+        <h1 className="tituloNoticias">NOTICIAS</h1>
+      </div>
         <div className="CajaNoticias">
            
             
@@ -32,5 +37,7 @@ export default function Noticias() {
     }
                 
         </div>
+        </div>
+        </>
     )
 }

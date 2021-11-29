@@ -1,8 +1,16 @@
-.Calendario{
-    text-align: center;
-    color: #dbdbdb;
-    background-color: #808080b0;
-    font-size: xxx-large;
+.calendario{
+  background-image: url(./CODW1.jpg);
+  width: 1630px;
+  height: 1014px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
   }
   .btnGenerarTorneo{
     color: white;
@@ -29,8 +37,8 @@
   
 }
 .cajaCalendario{
-  background-color: #292929c7;
-  height: 600px;
+  background-color: #292929de;
+  height: 695px;
   width: 960px;
   display: flex;
   flex-direction: column;
@@ -38,9 +46,9 @@
   justify-content: space-between;
   align-items: flex-start;
   align-content: flex-start;
-  margin-top: 70px;
+  margin-top: 0px;
   border-style: ridge;
-  border-color: #ff7b00;
+  border-color: #955240;
   border-width: 7px;
   padding: 20px;
   overflow-y: scroll;
@@ -74,9 +82,9 @@
 
 @media(max-width:640px){
   .cajaCalendario {
-    background-color: #292929c7;
-    height: 600px;
-    width: 290px;
+    background-color: #292929eb;
+    height: 961px;
+    width: 306px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -85,10 +93,23 @@
     align-content: flex-start;
     margin-top: 0px;
     border-style: ridge;
-    border-color: #ff7b00;
+    border-color: #955240;
     border-width: 7px;
     padding: 20px;
     overflow-y: scroll;
-    margin-left: 25px;
+    margin-left: 23px;
+}
+.calendario {
+  background-image: url(CODW1.jpg);
+  width: 100%;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
 }
 }

@@ -12,6 +12,7 @@ console.log("admin", datosUsuario.admin)
     
   return (   
          <>  
+         <div className="calendario">
          
          {datosUsuario.admin? (           
             <div className="cajaCalendario">                        
@@ -21,6 +22,7 @@ console.log("admin", datosUsuario.admin)
          )
          : 
          <VerTorneos/>} 
+         </div>
      </>   
   );
 }

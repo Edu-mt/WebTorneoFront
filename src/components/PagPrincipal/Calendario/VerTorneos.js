@@ -73,7 +73,7 @@ function VerTorneos() {
           }
         } 
         console.log("PERDEDOR" , perdedor);
-        const texto = ["el equipo " + resultados + " ha ganado contra " + perdedor + " en la jornada " + posicionJornada];
+        const texto = ["El equipo " + resultados + " ha ganado contra " + perdedor + " en la jornada " + posicionJornada];
         console.log(texto);
         const respuesta =  addNoticia(texto); 
         window.location.href = "http://localhost:3000/Noticias";
