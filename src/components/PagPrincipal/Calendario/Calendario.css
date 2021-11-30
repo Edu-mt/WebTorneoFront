@@ -54,6 +54,23 @@
   overflow-y: scroll;
   
 }
+.cajaCalendarioNoAdmin{
+  background-color: #292929de;
+  height: 695px;
+  width: 960px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-top: 0px;
+  border-style: ridge;
+  border-color: #955240;
+  border-width: 7px;
+  padding: 20px;
+  overflow-y: scroll;
+}
 .nomTorneo{
   width: 50em;
   height: 30px;

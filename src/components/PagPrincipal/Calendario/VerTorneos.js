@@ -97,7 +97,7 @@ function VerTorneos() {
     
     return (
       <>
-        <div>
+        <div className="cajaCalendarioNoAdmin">
           <TablaTorneo/>
           {datosUsuario.admin?(
             <div>
