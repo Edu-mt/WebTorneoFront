@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import {  useDispatch } from "react-redux";
-import { loggin, addDataUser } from "../../features/userSlice";
+import { loggin, addDataUser,addToken } from "../../features/userSlice";
 import {getUser} from "../../services/user";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import "../../App.css"
@@ -41,6 +41,7 @@ const realizarLogin = async() => {
         setCookie("password", password, 10);
         dispatch(loggin(true));
         dispatch(addDataUser(response.data[0]));
+        dispatch(addToken(response.token));
         // window.location.href = "http://localhost:3000/Noticias";  //entra por app y si se descomenta rompe noticias 
       }  
         console.log("Este es el nombre del GetUser",nombre,password)

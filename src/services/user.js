@@ -46,7 +46,7 @@ const getUser =async (nombre, password) => {
     params: {
       nombre: nombre,
       password: password,
-    },
+    },  
   })
   .then(function (response, err) {
     console.log(err);
@@ -61,6 +61,7 @@ const getUser =async (nombre, password) => {
       console.log("el usuario ha sido encontado")
       console.log("true",response.data)
       respuestaServidorLoggin=response.data;
+
     }
   })
   .catch(function (err) {

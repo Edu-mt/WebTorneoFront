@@ -3,6 +3,7 @@ import {createSlice} from '@reduxjs/toolkit';
 const initialState = {
     logged: false,
     dataUser: {},
+    token:"",
 }
 
 export const userSlice = createSlice({
@@ -16,13 +17,19 @@ export const userSlice = createSlice({
         addDataUser:(state, action) => {
             state.dataUser = action.payload;
             console.log("Este es el console dataUserSlice",state.dataUser)
+        },
+        addToken:(state, action) => {
+            state.token = action.payload;
+            console.log("Este es el console tokenSlice",state.token)
         }
     }
 });
 
-export const {loggin, addDataUser} = userSlice.actions;
+export const {loggin, addDataUser,addToken} = userSlice.actions;
 
 export const selectLogged = (state) => state.user.logged;
 export const selectDataUser = (state) => state.user.dataUser;
+export const selectToken = (state) => state.user.token;
+
 
 export default userSlice.reducer;
