@@ -92,7 +92,7 @@ function VerTorneos() {
    
       };
 
-      
+      console.log("Aqui patatas")
      
     
     return (
